@@ -447,6 +447,366 @@
 
                 </article>
 
+            </section>
+
+            <section class="week">
+
+                <h3 class="week__header">Tydzień IV 04.05.-10.05.2020 r.</h3>
+
+                <article class="article">
+
+                    <h4 class="article__header">Jest GIT!</h4>
+
+                    <p class="article__description">
+                        GIT to system kontroli wersji. Ułatwia on zarządzanie projektem. Pozwala on na łatwe:
+                    </p>
+
+                    <ul class="list">
+
+                        <li class="list__item">
+                            powrócenie do sprawnej wersji, gdy wkradnie nam się błąd do kodu i sprawi, że program
+                            przestanie działać.
+                        </li>
+
+                        <li class="list__item">
+                            Umożliwia również na wrócenie do poprzedniej wersji, gdy okaże się, że była lepsza niż
+                            obecna po wprowadzonych zmianach,
+                        </li>
+
+                        <li class="list__item">
+                            lub po przypadkowym usunięciu jakiegoś pliku.
+                        </li>
+
+                        <li class="list__item">
+                            Umożliwia on wprowadzenie zmian w kilku plikach (np. w celu zademonstrowaniu kilku opcji
+                            klientowi), a później na łatwe wprowadzenie cofnięcie wprowadzonych zmian.
+                        </li>
+
+                        <li class="list__item">
+                            umożliwia na pracę nad projektem grupowym, podzielonym na kilka segmentów, nad którymi
+                            pracują różne osoby. Łatwa jest wymiana plikami pomiędzy członkami zespołu i kontrola
+                            postępu pracy (podgląd wprowadzonych zmian).
+                        </li>
+
+                    </ul>
+
+                    <p class="article__description">
+                        Program GIT umożliwia nam śledzenie postępu prac. Czyli możemy krok po kroku zobaczyć jak
+                        powstawał projekt i jakie zmiany były w nim wprowadzone i w jakiej kolejności.
+                    </p>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">Instalujemy GIT'a</h4>
+
+                    <a href="https://git-scm.com">https://git-scm.com</a>
+
+                    <p class="article__description">
+                        Z powyższego linku ściągamy GIT'a na swój komputer i go instalujemy. Program obsługujemy poprzez
+                        komendy wpisywane w terminalu. Żeby sprawdzić czy GIT się zainstalował wpiszemy swoją pierwszą
+                        komendę:
+                    </p>
+
+                    <code class="code">
+                        git --version
+                    </code>
+
+                    <p class="article__description">
+                        Powinna pokazać się informacja o wersji zainstalowanej na naszym komputerze:
+                    </p>
+
+                    <code class="code">
+                        git version 2.28.0.windows.1
+                    </code>
+
+                    <p class="article__description">
+                        Następnym krokiem jest konfiguracja Gita poprzez wpisanie dwóch komend:
+                    </p>
+
+                    <pre class="pre">
+                        <code class="code">
+                            git config --global user.name "Jan Kowalski"
+                            git config --global user.email jankowalski@example.com
+                        </code>
+                    </pre>
+
+                    <p class="article__description">
+                        Informacje te służą temu, żeby podać kim jesteśmy. Jeśli gdzieś się pomylimy w trakcie
+                        wpisywania danych, możemy je poprawić poprzez ponowne wpisanie komendy już poprawionymi danymi.
+                    </p>
+
+                    <p class="article__description">
+                        Żeby sprawdzić czy dane prawidłowo się wprowadziły, wpisujemy komendę:
+                    </p>
+
+                    <pre class="pre">
+                        <code class="code">
+                            git config --get user.name
+                            git config --get user.email
+                        </code>
+                    </pre>
+
+                    <p class="article__description">
+                        Powinniśmy uzyskać odpowiedź:
+                    </p>
+
+                    <pre class="pre">
+                        <code class="code">
+                            Jan Kowalski
+                            jankowalski@example.com
+                        </code>
+                    </pre>
+
+                    <p class="article__description">
+                        Konfigurację konta robimy tylko raz, na samym początku korzystania konta użytkownika na danym
+                        komputerze.
+                    </p>
+
+                    <p class="article__description">
+                        Git składa się z repozytoriów (projektu) czyli wszystkie pliki jakie wchodzą skład danego
+                        projektu (katalogu).
+                    </p>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">Zakładamy pierwsze repozytorium</h4>
+
+                    <p class="article__description">
+                        Zakładamy je w katalogu <code class="code">homepage</code> do tego celu wykonujemy komendę:
+                    </p>
+
+                    <code class="code">
+                        git init
+                    </code>
+
+                    <p class="article__description">
+                        Pojawi się poniższy komunikat:
+                    </p>
+
+                    <code class="code">
+                        Initialized empty Git repository in C:/dev/homepage/.git/
+                    </code>
+
+                    <p class="article__description">
+                        Oznacza to, że utworzone zostało puste repozytorium homepage w katalogu homepage/.git/ Katalog
+                        ten jest ukryty, którego nie możemy skasować (nie powinniśmy, ponieważ zawiera ważne
+                        informacje). W tym katalogu znajduje się cała historia programy git.
+                    </p>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">Wprowadzamy pierwsze zmiany (i je podglądamy)</h4>
+
+                    <p class="article__description">
+                        Żeby to zrobić potrzebujemy commit'a (stan projektu i opis tego co się zmieniło od ostatniego
+                        zapisu). Zapisuje on tylko to co się zmieniło pomiędzy kolejnymi commit'ami.
+                    </p>
+
+                    <p class="article__description">
+                        Kilka komend dobrych na początek, żeby zrozumieć jak funkcjonuje Git:
+                    </p>
+
+                    <dl class="description-list">
+
+                        <dt class="description-list__term">
+                            <code class="code">
+                                git status
+                            </code>
+                        </dt>
+
+                        <dd class="description-list__data">
+                            polecenie, które daje nam informacje na jakim jesteśmy branchu (o branch;ach będzie
+                            później), informację o ilości commit'ów oraz o nieśledzonych plikach. Co oznacza, że Git
+                            bierze pod uwagę plików, wobec których nadzoruje zmiany w nich (nie należy do repozytorium,
+                            mimo że jest w katalogu). Musimy zasygnalizować Gitowi, które pliki powinien śledzić.
+                            Informacja o commit'cie powinna wyglądać tak:
+                            <pre class="pre">
+                                <code class="code">
+                                    On branch master
+
+
+                                No commits yet
+
+
+                                Untracked files:
+                                (use "git add <file>..." to include in what will be committed)
+                                    img/
+                                    index.html
+                                    main.js
+                                    nauka-css.html
+                                    nauka-html.html
+                                    nauka-js.html
+                                    nauka-narzedzia.html
+                                    style.css
+                                </code>
+                            </pre>
+                        </dd>
+
+                        <dt class="description-list__term">
+                            git add .
+                        </dt>
+
+                        <dd class="description-list__data">
+                            polecenie. które dodaje wszystkie pliki do śledzenia przez Git'a w danym katalogu oraz
+                            podkatalogach. Teraz po wpisaniu komendy git status dostaniemy informacje, o plikach które
+                            są już śledzone (są nowe) i są do zacommitowania:
+
+                            <pre class="pre">
+                                <code class="code">
+                                    No commits yet
+                                    
+                                    
+                                    Changes to be committed:
+                                      (use "git rm --cached <file>..." to unstage)
+                                            new file:   img/Image.png
+                                            new file:   img/Image2.png
+                                            new file:   img/Image3.png
+                                            new file:   img/Image4.png
+                                            new file:   img/Image5.png
+                                            new file:   img/Image6.png
+                                            new file:   img/css.png
+                                            new file:   img/hamburger-menu.png
+                                            new file:   img/haraf-header.jpg
+                                            new file:   img/html5.png
+                                            new file:   img/js.png
+                                            new file:   img/szkielet.png
+                                            new file:   img/url.png
+                                            new file:   img/warstwy.png
+                                            new file:   index.html
+                                            new file:   main.js
+                                            new file:   nauka-css.html
+                                            new file:   nauka-html.html
+                                            new file:   nauka-js.html
+                                            new file:   nauka-narzedzia.html
+                                            new file:   style.css
+                                </code>
+                            </pre>
+                        </dd>
+
+                        <dt class="description-list__term">
+                            git commit -m "opis zmian"
+                        </dt>
+
+                        <dd class="description-list__data">
+                            zapisuje zmiany wprowadzone w projekcie
+
+                            <pre class="pre">
+                                <code class="code">
+                                    git commit -m "initial commit"
+                                    
+                                    [master (root-commit) a13c455] initial commit
+                                    21 files changed, 2008 insertions(+)
+                                    create mode 100644 img/Image.png
+                                    create mode 100644 img/Image2.png
+                                    create mode 100644 img/Image3.png
+                                    create mode 100644 img/Image4.png
+                                    create mode 100644 img/Image5.png
+                                    create mode 100644 img/Image6.png
+                                    create mode 100644 img/css.png
+                                    create mode 100644 img/hamburger-menu.png
+                                    create mode 100644 img/haraf-header.jpg
+                                    create mode 100644 img/html5.png
+                                    create mode 100644 img/js.png
+                                    create mode 100644 img/szkielet.png
+                                    create mode 100644 img/url.png
+                                    create mode 100644 img/warstwy.png
+                                    create mode 100644 index.html
+                                    create mode 100644 main.js
+                                    create mode 100644 nauka-css.html
+                                    create mode 100644 nauka-html.html
+                                    create mode 100644 nauka-js.html
+                                    create mode 100644 nauka-narzedzia.html
+                                    create mode 100644 style.css
+                                </code>
+                            </pre>
+                        </dd>
+
+                    </dl>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">Jak często commit'ować?</h4>
+
+                    <p class="article__description">
+                        Na początku warto często commitować, żeby wyrobić sobie nawyk. Watro robić commit'a każdej
+                        większej zmianie (np. dodanie sekcji w artykule, dodanie stylów do jakiejś klasy).
+                    </p>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">
+                        Polecienia cd.
+                    </h4>
+
+                    <dl class="description-list">
+
+                        <dt class="description-list__term">
+                            <code class="code">gitk</code>
+                        </dt>
+
+                        <dd class="description-list__data">
+                            pokazuje nam:
+                            <ul class="list">
+
+                                <li class="list__item">
+                                    całą historię commit'ów,
+                                </li>
+
+                                <li class="list__item">
+                                    pokazuje nasze dane,
+                                </li>
+
+                                <li class="list__item">
+                                    autorów poszczególnych commit'ów,
+                                </li>
+
+                                <li class="list__item">
+                                    widzimy tytuły commit'ów,
+                                </li>
+
+                                <li class="list__item">
+                                    widzimy, które pliki się zmieniły (możemy podglądać pliki i obserwować co się w nich
+                                    zmieniło),
+                                </li>
+
+                                <li class="list__item">
+                                    datę kiedy dany commit został zrobiny,
+                                </li>
+
+                            </ul>
+                        </dd>
+
+                        <dt class="description-list__term">
+                            <code class="code">clear</code>
+                        </dt>
+
+                        <dd class="description-list__data">
+                            polecenie terminala, które czyści nam okno danego terminala
+                        </dd>
+
+                    </dl>
+
+                    <p class="article__description">
+                        W Visual Studio Code jest narzędzie: Git (jest ono wbudowane w VSC), które pozwala nam na
+                        podglądanie repozytorium. Dodatkowo możemy sobie zainstalować rozszerzenie GitLens. jest to już
+                        dość mocno rozbudowane narzędzie, które daje większe możliwości kontroli zmian wprowadzonych w
+                        plikach.
+                    </p>
+
+                </article>
+
+            </section>
+
         </section>
 
     </main>

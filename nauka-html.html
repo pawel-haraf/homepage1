@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Będzie mały bonus...</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navigation">
+            <a href="index.html" class="navigation__link">Strona główna</a>
+            <a href="nauka-html.html" class="navigation__link">Nauka - HTML</a>
+            <a href="nauka-css.html" class="navigation__link">Nauka - CSS</a>
+            <a href="nauka-js.html" class="navigation__link">Nauka - JavaScript</a>
+            <a href="nauka-narzedzia.html" class="navigation__link">Nauka - Narzędzia</a>
+        </nav>
+    </header>
+
+    <main>
+        <header id="top">
+            <h1 class="main__header">Moje postępy w nauce HTML'a</h1>
+        </header>
+
+        <section class="notes">
+            <h2 class="notes__header">Notatki WTF: HTML</h2>
+            <img class="notes__image" src="./img/html5.png" alt="logo HTLM 5">
+
+            <section class="week">
+
+                <h3 class="week__header">Tydzień II 20.04. - 26.04.2020 r.</h3>
+
+                <article class="article">
+
+                    <h4 class="article__header">Podstawowe informacje o HTLM'u</h4>
+
+                    <p class="article__description">
+                        HTML (czyli HyperText Markup Language) odpowiada za treść, a właściwie za jej opakowanie.
+                        Informuje przeglądarkę gdzie w tekście znajduą się nagłówki, odnośniki, obrazki formularze itp.
+                    </p>
+
+                    <p class="article__description">
+                        Jako treść w dokumencie HTML uznajemy:
+                    </p>
+
+                    <ul class="list">
+
+                        <li class="list__item">Teksty</li>
+
+                        <li class="list__item">Nagłówki</li>
+
+                        <li class="list__item">Linki</li>
+
+                        <li class="list__item">Listy</li>
+
+                        <li class="list__item">Definicje</li>
+
+                        <li class="list__item">Obrazki</li>
+
+                        <li class="list__item">Video</li>
+
+                        <li class="list__item">Formularze</li>
+
+                        <li class="list__item">Wszystko co jest nośnikiem informacji</li>
+
+                    </ul>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">Budowa dokumentu HTML</h4>
+
+                    <p class="article__description">
+                        Plik HTML składa się ze ze znaczników (tagów/elementów). Każdy ze znaczników (na co ich nazwa
+                        wskazuje) nadaje znaczenie poszczególnym fragmentom tekstu. Dlatego mówimy, że dokument HTML
+                        powinien być <strong class="strong">semantyczny</strong> (mający znaczenie).<br>
+                        Budowa znaczników wygląda następująco:
+                    </p>
+
+                    <code class="code">&lt;znacznik atrybut=”wartość”&gt;treść&lt;/znacznik&gt;</code>
+
+                    <p class="article__description">
+
+                        Pliki zawierające kod HTML mają zwykle rozszerzenie .html. Plik ten to szkielet strony
+                        internetowej, nawet ma taką budowę (co pokazuje obrazek niżej)
+
+                    </p>
+
+                    <img src="./img/szkielet.png" class="article__image" alt="szkielet strony internetowej">
+
+                    <p class="article__description">
+                        Żeby zacząć w VSC po utworzeniu pliku index.html wpisujemy "!" i następnie wciskamy klawisz tab.
+                        Utworzy to na początkowy szkielet strony.
+                    </p>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">Znaczniki</h4>
+
+                    <p class="article__description">
+
+                        W tym tygodniu poznaliśmy następujące znaczniki:
+
+                    </p>
+
+                    <ul class="list">
+
+                        <li class="list__item"><code class="code">&lt;main&gt;</code> - główna część dokumentu</li>
+
+                        <li class="list__item"><code class="code">&lt;section&gt;</code> - sekcje dokumentu</li>
+
+                        <li class="list__item"><code class="code">&lt;article&gt;</code> - samodzielne treści</li>
+
+                        <li class="list__item"><code class="code">&lt;header&gt;</code> - Nagłówek - dokumentu / sekcji
+                            / artykułu</li>
+
+                        <li class="list__item"><code class="code">&lt;footer&gt;</code> - Stopka - dokumentu / sekcji
+                        </li>
+
+                        <li class="list__item"><code class="code">&lt;h1-h6&gt;</code> - Tekstowe nagłówki tytułowe -
+                            dokumentu / sekcji</li>
+
+                        <li class="list__item"><code class="code">&lt;p&gt;</code> - Paragraf / akapit</li>
+
+                    </ul>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">Jak sprawdzić czy mój HTML jest OK?</h4>
+
+                    <p class="article__description">
+
+                        Możemy to sprawdzić na stronie: <a href="https://validator.w3.org/nu/#textarea">validator</a>
+
+                    </p>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">Podsumowanie</h4>
+
+                    <ul class="list">
+
+                        <li class="list__item">
+                            Opakowuje i opisuje treść strony
+                        </li>
+
+                        <li class="list__item">
+                            Mówi przeglądarce o strukturze dokumentu (i o tym co ma wczytać)
+                        </li>
+
+                        <li class="list__item">
+                            Posiada swoją zdefiniowaną składnie
+                        </li>
+
+                        <li class="list__item">
+                            Nie jest językiem programowania, jest językiem znaczników (Markup Language)
+                        </li>
+
+                        <li class="list__item">
+                            Aktualną rekomendowaną wersją jest 5.2
+                        </li>
+
+                        <li class="list__item">
+                            Całą specyfikację znajdziesz na stronie w3c: <a
+                                href="https://www.w3.org/TR/html52/">https://www.w3.org/TR/html52/</a>
+                        </li>
+
+                    </ul>
+
+                </article>
+
+            </section>
+
+            <section class="week">
+
+                <h3 class="week__header">Tydzień III 27.04.-03.05.2020 r.</h3>
+
+                <article class="article">
+
+                    <h4 class="article__header">WTF: HTML II - znaczniki</h4>
+
+                    <p class="article__description">
+                        Znaczniki poznane w tym tygodniu to:
+                    </p>
+
+                    <ul class="list">
+
+                        <li class="list__item">
+                            <code class="code">&lt;br&gt;</code> nowa linia
+                        </li>
+
+                        <li class="list__item">
+                            <code class="code">&lt;b&gt;</code> vs <code class="code">&lt;strong&gt;</code> vs <code
+                                class="code">&gt;i&lt;</code> vs <code class="code">&lt;em&gt;</code> elementy do
+                            wyróżniania tekstu
+
+                            <ul class="list">
+
+                                <li class="list__item">
+                                    <code class="code">&lt;b&gt;</code> & <code class="code">&lt;i&gt;</code> Nie mają
+                                    dużego znaczenia semantycznego - służą do wyróżnienia fragmentu z tekstu
+                                    otaczającego. Służą odpowiednio do pogrubienia i pochylenia tekstu.
+                                </li>
+
+                                <li class="list__item">
+                                    <code class="code">&lt;strong&gt;</code> - podkreśla wysoką istotność i po ważność
+                                    frazy w nim zawartej
+                                </li>
+
+                                <li class="list__item">
+                                    <code class="code">&lt;em&gt;</code> - podkreśla, że tekst może mieć inne znaczenie
+                                    (np. ironia)
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="list__item">
+                            <code class="code">a </code> - linki / łącza wewnątrz dokumentu:<br>
+                            <code class="code">&lt;a href="link do złącza" target=""&gt;opis łącza&lt;/a&gt;</code>
+                        </li>
+
+                        <li class="list__item">
+                            atrybut <code class="code">id</code> - identyfikuje element (przydaje się do nawigacji w
+                            obrębie dokumentu):<br>
+                            <code class="code">&lt;element id="moj-identyfikator"&gt;</code>
+                        </li>
+
+                        <li class="list__item">
+                            Nawigacja <code class="code">&lt;nav&gt;</code>
+                        </li>
+
+                        <li class="list__item">
+                            <code class="code">img</code> - obrazek o podanym adresie:<br>
+                            <code class="code">&lt;img src="link-do-obrazka" alt="opis-obrazka"&gt;</code>
+                        </li>
+                    </ul>
+
+                </article>
+
+                <article class="article__header">
+
+                    <h4 class="article__description">Podsumowanie</h4>
+
+                    <ul class="list">
+
+                        <li class="list__item">
+                            atrybuty są "niewidzialne" - chowamy je w znaczniku
+                        </li>
+
+                        <li class="list__item">
+                            nadają elementom dodatkowe właściwości (href, src)
+                        </li>
+
+                        <li class="list__item">
+                            pozwalają na grupowanie elementów (class)
+                        </li>
+
+                        <li class="list__item">
+                            pozwalają na identyfikowanie elementów (id)
+                        </li>
+
+                        <li class="list__item">
+                            można je miksować
+                        </li>
+
+                        <li class="list__item">
+                            spis atrybutów "globalnych"<br>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">Mozilla -
+                                Global attributes</a>
+                        </li>
+                    </ul>
+
+                </article>
+
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer__description">
+            Mój pierwszy internetowy dziennik. Anno domini 2020 r.
+        </p>
+        <a href="#top">Do góry strony.</a>
+    </footer>
+
+</body>
+
+</html>

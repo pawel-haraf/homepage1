@@ -1,0 +1,36 @@
+.about {
+    background: #D4C685;
+}
+
+
+.article__description {
+    color: #36413E;
+}
+
+body {
+    background: #fefefe;
+}
+
+.header {
+    background: #fefefe;
+}
+
+.main__header {
+    color: #91140C;
+}
+
+nav a {
+    color: #c77d0f;
+}
+
+.notes {
+    background: #D4C685;
+}
+
+.notes__header {
+    color: #1460AA;
+}
+
+.selektor {
+    padding-left: 40px;
+}

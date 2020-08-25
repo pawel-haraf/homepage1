@@ -805,6 +805,138 @@
 
                 </article>
 
+                <article class="article">
+
+                    <h4 class="article__header">GitHub</h4>
+
+                    <p class="article__description">
+                        Jest to narzędzie, które pozwoli na pokazywanie światu naszego kodu bez konieczności wklejania
+                        go na CodePen'a lub inne tego typu serwisy. Pozwala on an trzymanie naszych repozytoriów poza
+                        naszym komputerem. Na początek:
+                    </p>
+
+                    <ol class="list">
+
+                        <li class="list__item">
+                            Zakładamy konto na GitHub'ie: <a href="https://github.com">https://github.com</a> - podajemy
+                            prawdziwe dane, najlepiej swoje imię i nazwisko. Jest to nasza programistyczna wizytówka,
+                            dlatego dbamy o to żeby była jak najlepsza. Często w rozmowie o pracę podajemy link do
+                            serwisu, gdzie pracodawca może zobaczyć jak pracujemy.
+                        </li>
+
+                        <li class="list__item">
+                            Zakładamy repozytorium w serwisie GitHub.
+                        </li>
+
+                        <li class="list__item">
+                            Podpinamy repozytorium zdalne do lokalnego. Wykonujemy to za pomocą dwóch linijek kodu
+                            wpisanych w terminalu, które dostaniemy po utworzeniu repozytorium na GitHubie:<br>
+                            <pre class="pre">
+                                <code class="code">
+                                    git remote add origin https://github.com/imię-nazwisko/homepage.git
+                                    git push -u origin master
+                                </code>
+                            </pre>
+                            Jeśli nie mam na dysku plików utworzonego repozytorium, to możemy je stworzyć na dysku po
+                            wykorzystaniu poniższego kodu:
+                            <pre class="pre">
+                                <code class="code">
+                                    echo "# homepage1" >> README.md
+                                    git init
+                                    git add README.md
+                                    git commit -m "first commit"
+                                    git remote add origin https://github.com/imię-nazwisko/homepage.git
+                                    git push -u origin master
+                                </code>
+                            </pre>
+                        </li>
+
+                        <li class="list__item">
+                            Gdy już po powiązaniu repozytorium lokalnego z zdalnym i dalej pracujemy z kodem
+                            (wprowadzamy jakieś zmiany w projekcie i je commit'ujemy), to kolejne wysłanie danych o
+                            repozytorium na GitHub'a będzie możliwe za pomocą komendy:<br>
+                            <code class="code">git push</code>
+                        </li>
+
+                        <li class="list__item">
+                            Kroki przy commit'owaniu:
+                            <ol class="list">
+
+                                <li class="list__item">
+                                    <code class="code">git status</code>
+                                </li>
+
+                                <li class="list__item">
+                                    git add .
+                                </li>
+
+                                <li class="list__item">
+                                    git commit -m "nazwa commit'a"
+                                </li>
+
+                                <li class="list__item">
+                                    git status
+                                </li>
+
+                                <li class="list__item">
+                                    git push
+                                </li>
+
+                            </ol>
+                        </li>
+
+                    </ol>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">Podsumowanie</h4>
+
+                    <ul class="list">
+
+                        <li class="list__item">
+                            GIT pozwala na sprawne zarządzanie zmianami w projekcie.
+                        </li>
+
+                        <li class="list__item">
+                            Działa lokalnie (GIT).
+                        </li>
+
+                        <li class="list__item">
+                            Do działania zdalnego potrzebuje serwera (np. GitHub).
+                        </li>
+
+                        <li class="list__item">
+                            Znajomość podstaw GIT-a jest wymagana niezależnie od technologii.
+                        </li>
+
+                        <li class="list__item">
+                            Konto na GitHubie jest Twoją programistyczną wizytówką, zadbaj aby była ładna i prawdziwa 🙂
+                        </li>
+
+                        <li class="list__item">
+                            Commitujemy jak dokładamy jakąś widoczną zmianę do projektu  (lepiej częściej, niż za mało)
+                        </li>
+
+                        <li class="list__item">
+                            Podstawowy flow:
+
+                            <ul class="list">
+
+                                <li class="list__item">git add .</li>
+
+                                <li class="list__item">git commit -m "opis zmiany"</li>
+
+                                <li class="list__item">git push</li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </article>
+
             </section>
 
         </section>

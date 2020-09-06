@@ -773,10 +773,48 @@
 
                         <ul class="list">
                             <li class="list__item">
-                                <code class="code">marin: 10px auto;</code> - sprawi, że przeglądarka z prawej i lewej strony dobierze taki sam margines, czyli element się wyśrodkuje (będzie to działać dla elementów blokowych). Żeby ta własność zadziałała, element musi mieć zdefiniowaną szerokość. w innym przypadku cały czas będzie domyślnie szeroki na całe okno, czyli nie będzie miał się z czego środkować. Nie jest to prawidłowy sposób wyśrodkowywania elementów.
+                                <code class="code">marin: 10px auto;</code> - sprawi, że przeglądarka z prawej i lewej
+                                strony dobierze taki sam margines, czyli element się wyśrodkuje (będzie to działać dla
+                                elementów blokowych). Żeby ta własność zadziałała, element musi mieć zdefiniowaną
+                                szerokość. w innym przypadku cały czas będzie domyślnie szeroki na całe okno, czyli nie
+                                będzie miał się z czego środkować. Nie jest to prawidłowy sposób wyśrodkowywania
+                                elementów.
                             </li>
                         </ul>
 
+                    </dl>
+
+                </article>
+
+                <article class="article">
+
+                    <h4 class="article__header">Życie w pudełku: box-sizing</h4>
+
+                    <p class="article__description">
+                        Box-sizing to wielkość naszego pudełka (elementu). Wielkość pudełka możemy mierzyć na dwa
+                        sposoby:
+                    </p>
+
+                    <dl class="description-list">
+
+                        <dt class="description-list__term">
+                            content-box
+                        </dt>
+
+                        <dd class="description-list__data">
+                            czyli bierzemy pod uwagę samą wielkość zawartości elementu, bez uwzględnienia paddingu,
+                            ramki i marginesu zewnętrznego. Czyli Te wartości dodatkowo trzeba będzie w pamięci dodawać
+                            do wielkości elementu.
+                        </dd>
+
+                        <dt class="description-list__term">
+                            border-box
+                        </dt>
+
+                        <dd class="description-list__data">
+                            w tym przypadku bierzemy pod uwagę wielkość elementu razem z ramką i paddingiem. Czyli
+                            wielkość zawartości zostanie automatycznie dobrana po odliczeniu borderu i paddingu.
+                        </dd>
                     </dl>
 
                 </article>

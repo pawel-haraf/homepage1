@@ -819,6 +819,92 @@
 
                 </article>
 
+                <article class="article">
+
+                    <h4 class="article_header">Życie w pudełku: position</h4>
+
+                    <p class="article__description">
+                        Własność position umożliwia nam pozycjonowanie elementów w oknie przeglądarki. Nie musimy dzięki
+                        niej korzystać z zdefiniowanych w przeglądarce układów. Możemy określić, że ten element ma
+                        znajdować się dokładnie w tym i tym miejscu.
+                    </p>
+
+                    <p class="article__description">
+                        Wartości możliwe do zdefiniowania dla position:
+                    </p>
+
+                    <dl class="description-list">
+
+                        <dt class="description-list__term">static</dt>
+
+                        <dd class="description-list__data">
+                            wartość domyślna. Każdy kolejny element jest umieszczany poniżej elementu poprzedniego.
+                        </dd>
+
+                        <dt class="description-list__term">relative</dt>
+
+                        <dd class="description-list__data">
+                            pozycjonowanie względne - jej położenie jest <strong class="strong">zależne</strong> od
+                            elementów otaczających i względem nich jest przesuwany (umożliwia na przesunięcie elementu
+                            względem miejsca, w którym zostałby umieszczony przy wartości <code
+                                class="code">static</code>).
+                        </dd>
+
+                        <dt class="description-list__term">absolute</dt>
+
+                        <dd class="description-list__data">
+                            pozycjonowanie bezwzględne, czyli określa dokładne położenie danego elementu w oknie
+                            przeglądarki i nie wpływa on na położenie innych elementów (może się zdarzyć, że będzie
+                            nachodził na inne elementy). Możliwe jest również określenie dokładnej pozycji w elemencie,
+                            gdy ten element będzie miał własność <code class="code">position: relative;</code>
+                        </dd>
+
+                        <dt class="description-list__term">fixed</dt>
+
+                        <dd class="description-list__data">
+                            ma bardzo podobne własności jak absolute. Różnica polega na tym, że pozycjonowanie elementu
+                            następuje względem <strong class="strong">okna przeglądarki</strong> czyli dany element
+                            będzie zawsze wyświetlany w tym samym miejscu (kiedy zawartość będzie przesuwana, element
+                            nie będzie się przesuwał. Będzie wyświetlany w tym samym miejscu).
+                        </dd>
+
+                        <dt class="description-list__term">sticky</dt>
+
+                        <dd class="description-list__data">
+                            sprawia, że dany element będzie odpowiednio pozycjonowany w rodzicu. Gdy element dojedzie do
+                            górnej krawędzi swojego rodzica, zatrzyma się przy górnej krawędzi (lub odsunięty od niej
+                            jeśli odpowiednio zdefiniujemy top) i będzie wyświetlany i nachodził na elementy niżej, aż
+                            do końca swojego rodzica i wtedy zniknie razem z rodzicem gdy jego zawartość będzie
+                            przesuwana (przeglądana). Żeby funkcja działa rodzic <strong class="strong">nie
+                                może</strong> mieć overflow'a i trzeba określić własność top (odsunięcie od górnej
+                            krawędzi).
+                        </dd>
+
+                    </dl>
+
+                    <p class="article__description">Nowe własności:</p>
+
+                    <dl class="description-list">
+
+                        <dt class="description-list__term">top, left, right, buttom</dt>
+
+                        <dd class="description-list__data">
+                            własności przesunięcia, określa odległości odstępu od krawędzi danego pudełka.
+                        </dd>
+
+                        <dt class="description-list__term">z-index</dt>
+
+                        <dd class="description-list__data">
+                            pozwala na zdefiniowanie kolejności wyświetlania elementów. Gdy elementy nachodzą na siebie,
+                            ta własność pozwala nam na zdefiniowanie, który element ma przykryć inne elementy.
+                            Wartościami własności są liczby. Im wyższa ona będzie tym wyżej będzie wyświetlany element
+                            (czyli 150 będzie wyświetlane nad 100 itd.).
+                        </dd>
+
+                    </dl>
+
+                </article>
+
             </section>
 
         </section>

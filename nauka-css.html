@@ -905,6 +905,43 @@
 
                 </article>
 
+                <article class="article">
+
+                    <h4 class="article__header">Życie w pudełku: float</h4>
+
+                    <p class="article__description">
+                        Własność ta służy do opływania elementów. Czyli dany element będzie opływany przez pozostałą
+                        treść w pudełku. Element taki nie jest ograniczony do wielkości pudełka, będzie poza niego
+                        wystawać.
+                    </p>
+
+                    <p class="article__description">
+                        Żeby temu zapobiec możemy użyć własności <code class="code">clear</code>. Możemy jej użyć na dwa
+                        sposoby:
+                    </p>
+
+                    <ol class="list">
+
+                        <li class="list__item">
+                            Tworzymy dodatkowe puste pudełko i przypisujemy dla niego własność <code
+                                class="code">clear: both;</code> (w tym przypadku rodzic zostanie rozszerzony do takiego
+                            rozmiaru, żeby nie wystawał element poza rodzica.
+                        </li>
+
+                        <li class="list__item">
+                            Rodzicowi elementu przypisujemy własność <code class="code">overflow: hidden;</code> co
+                            spowoduje rozszerzenie danego elementu, gdy nie będzie miał przypisanej wysokości. W innym
+                            przypadku będzie on ucięty.
+                        </li>
+
+                    </ol>
+
+                    <p class="article__description">
+                        Własności tej nie wykorzystujemy do budowy layoutów.
+                    </p>
+
+                </article>
+
             </section>
 
         </section>

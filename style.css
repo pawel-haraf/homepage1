@@ -1,36 +1,48 @@
 .about {
-    background: #D4C685;
+  background: #d4c685;
 }
 
-
 .article__description {
-    color: #36413E;
+  color: #36413e;
 }
 
 body {
-    background: #fefefe;
+  background: #fefefe;
 }
 
 .header {
-    background: #fefefe;
+  background: #fefefe;
 }
 
 .main__header {
-    color: #91140C;
+  color: #91140c;
 }
 
-nav a {
-    color: #c77d0f;
+.navigation {
+  background: #04ac26;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.navigation__link {
+  color: #c77d0f;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navigation__link--homepage {
+  background: yellow;
+  color: #000;
 }
 
 .notes {
-    background: #D4C685;
+  background: #d4c685;
 }
 
 .notes__header {
-    color: #1460AA;
+  color: #1460aa;
 }
 
 .selektor {
-    padding-left: 40px;
+  padding-left: 40px;
 }

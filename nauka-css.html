@@ -382,14 +382,14 @@
 
             <ol class="list">
               <li class="list__item">
-                <img src="./img/Image.png" alt="Przypadek 1" />
+                <img src="./img/Image.png" alt="Przypadek 1" class="list__image"/>
                 <p class="list__item--description">
                   Wygrywa pierwszy, ponieważ więcej ma wymienionych elementów.
                 </p>
               </li>
 
               <li class="list__item">
-                <img src="./img/Image2.png" alt="Przypadek 2" />
+                <img src="./img/Image2.png" alt="Przypadek 2" class="list__image"/>
                 <p class="list__item--description">
                   Wygrywa dugi przypadek, ponieważ odwołuje się bezpośrednio do
                   id, co jest wyżej w klasyfikacji.
@@ -397,7 +397,7 @@
               </li>
 
               <li class="list__item">
-                <img src="./img/Image3.png" alt="Przypadek 3" />
+                <img src="./img/Image3.png" alt="Przypadek 3" class="list__image"/>
                 <p class="list__item--description">
                   Tutaj również wygrywa drugi przypadek mimo, że oba odwołują
                   się do id ale w drugim występuje odwołanie do klasy co jest
@@ -406,7 +406,7 @@
               </li>
 
               <li class="list__item">
-                <img src="./img/Image4.png" alt="Przypadek 4" />
+                <img src="./img/Image4.png" alt="Przypadek 4" class="list__image"/>
                 <p class="list__item--description">
                   Tutaj wygrywa drugi przypadek, w którym występuje odwołanie do
                   !importanta
@@ -414,7 +414,7 @@
               </li>
 
               <li class="list__item">
-                <img src="./img/Image5.png" alt="Przypadek 5" />
+                <img src="./img/Image5.png" alt="Przypadek 5" class="list__image"/>
                 <p class="list__item--description">
                   Tutaj ważniejszy jest pierwszy przypadek, w którym jest
                   przypadkiem liniowym (inline)
@@ -422,7 +422,7 @@
               </li>
 
               <li class="list__item">
-                <img src="./img/Image6.png" alt="Przypadek 6" />
+                <img src="./img/Image6.png" alt="Przypadek 6" class="list__image"/>
                 <p class="list__item--description">
                   Kolejny przypadek !importanta który wygrywa z wszystkimi
                   (drugi przypadek)
@@ -682,26 +682,22 @@
 
                 <ul class="list">
                   <li class="list__item">
-                    Zapis pełny:
-                    <pre class="pre">
-                                        <code class="code">
-                                            padding-top: 3px;
-                                            padding-right: 4px;
-                                            padding-bottom: 5px;
-                                            padding-left: 6px;
-                                        </code>
-                                    </pre>
+                    Zapis pełny:<br>
+                      <code class="code">
+                        padding-top: 3px;<br>
+                        padding-right: 4px;<br>
+                        padding-bottom: 5px;<br>
+                        padding-left: 6px;
+                      </code>
                   </li>
 
                   <li class="list__item">
-                    Zapis skrótowy (shorthand)
-                    <pre class="pre">
-                                        <code class="code">
-                                            padding: 3px 4px 5px 6px;
-                                            gdzie:
-                                            padding: top right bottom left;
-                                        </code>
-                                    </pre>
+                    Zapis skrótowy (shorthand)<br>
+                    <code class="code">
+                      padding: 3px 4px 5px 6px;<br>
+                      gdzie:<br>
+                      padding: top right bottom left;<br>
+                    </code>
                     Żeby zapisać osobno kolejne wartości paddingu dla góry,
                     prawej strony, dołu, lewej strony to zaczynamy od góry
                     przesuwamy się zgodnie z ruchem wskazówek zegara, czyli

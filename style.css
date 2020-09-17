@@ -11,6 +11,7 @@
 }
 
 .about__header {
+  color: #720E07;
   margin: 10px auto;
   text-align: center;
 }
@@ -22,12 +23,12 @@
 }
 
 .about__navigation {
-  color: #c77d0f;
+  color: #FE9000;
 }
 
 .article {
   width: 70vw;
-  background: #a7650e;
+  background: #E2E2E2;
   margin: 10px auto;
   border-radius: 8px;
 }
@@ -39,6 +40,7 @@
 }
 
 .article__header {
+  color: #451F55;
   margin: 10px auto;
   padding-top: 16px;
   text-align: center;
@@ -90,18 +92,18 @@ body {
 .main__header {
   width: 80vw;
   margin: 10px auto;
-  color: #91140c;
+  color: #22162B;
   text-align: center;
 }
 
 .navigation {
-  background: #04ac26;
+  background: #07070A;
   padding: 16px;
   border-radius: 8px;
 }
 
 .navigation__link {
-  color: #c77d0f;
+  color: #FE9000;
   display: inline-block;
   margin-right: 20px;
 }
@@ -119,7 +121,7 @@ body {
 }
 
 .notes__header {
-  color: #1460aa;
+  color: #720E07;
   margin: 10px auto;
   text-align: center;
 }
@@ -142,6 +144,7 @@ body {
 }
 
 .week__header {
+  color: #3C6997;
   margin: 10px auto;
   text-align: center;
 }

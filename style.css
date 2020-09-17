@@ -11,7 +11,7 @@
 }
 
 .about__header {
-  color: #720E07;
+  color: #720e07;
   margin: 10px auto;
   text-align: center;
 }
@@ -23,12 +23,12 @@
 }
 
 .about__navigation {
-  color: #FE9000;
+  color: #fe9000;
 }
 
 .article {
   width: 70vw;
-  background: #E2E2E2;
+  background: #e2e2e2;
   margin: 10px auto;
   border-radius: 8px;
 }
@@ -40,7 +40,7 @@
 }
 
 .article__header {
-  color: #451F55;
+  color: #451f55;
   margin: 10px auto;
   padding-top: 16px;
   text-align: center;
@@ -50,6 +50,11 @@
   display: block;
   margin: 10px auto;
   width: 60vw;
+}
+
+.article__link {
+  color: #fe9000;
+  padding: 16px;
 }
 
 body {
@@ -88,22 +93,21 @@ body {
   margin: 10px auto;
 }
 
-
 .main__header {
   width: 80vw;
   margin: 10px auto;
-  color: #22162B;
+  color: #22162b;
   text-align: center;
 }
 
 .navigation {
-  background: #07070A;
+  background: #07070a;
   padding: 16px;
   border-radius: 8px;
 }
 
 .navigation__link {
-  color: #FE9000;
+  color: #fe9000;
   display: inline-block;
   margin-right: 20px;
 }
@@ -121,7 +125,7 @@ body {
 }
 
 .notes__header {
-  color: #720E07;
+  color: #720e07;
   margin: 10px auto;
   text-align: center;
 }
@@ -143,9 +147,14 @@ body {
   margin: 10px auto;
 }
 
+.week__description {
+  color: #36413e;
+  text-align: justify;
+  padding: 16px;
+}
+
 .week__header {
-  color: #3C6997;
+  color: #3c6997;
   margin: 10px auto;
   text-align: center;
 }
-

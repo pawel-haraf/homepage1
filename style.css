@@ -102,6 +102,7 @@ body {
 
 .code {
   padding: 0 10px;
+  color: #212529;
 }
 
 /* Lista haseł */
@@ -145,6 +146,7 @@ body {
   position: fixed;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 }
 
 /* listy */

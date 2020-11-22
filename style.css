@@ -52,7 +52,7 @@
 .article__image {
   display: block;
   margin: 10px auto;
-  width: 60vw;
+  width: 50vw;
 }
 
 .article__link {
@@ -84,7 +84,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-self: center;
+  text-align: center;
 }
 
 .aside__link {
@@ -178,7 +179,7 @@ body {
 /* Nawigacja - nagłówek */
 .navigation {
   background: #212529;
-  margin: 10px;
+  margin: 0 10px;
   padding: 16px;
   border-radius: 8px;
 }

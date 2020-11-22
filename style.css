@@ -1,3 +1,4 @@
+/* Sekcja o mnie */
 .about {
   background: #6C757D;
   margin: 10px auto;
@@ -27,6 +28,7 @@
   color: #343A40;
 }
 
+/* artykuł */
 .article {
   width: 55vw;
   background: #e2e2e2;
@@ -58,6 +60,7 @@
   padding: 16px;
 }
 
+/* menu boczne */
 .aside {
   position: sticky;
   top: 90px;
@@ -90,6 +93,7 @@
   margin-bottom: 5px;
 }
 
+/* Body */
 body {
   background: #F8F9FA;
 }
@@ -98,12 +102,15 @@ body {
   padding: 0 10px;
 }
 
+/* Lista haseł */
 .description-list {
   margin: 10px auto;
   width: 60vw;
   text-align: justify;
 }
 
+
+/* Stopka */
 .footer {
   background: #212529;
   border-radius: 8px;
@@ -123,6 +130,7 @@ body {
   padding-bottom: 10px;
 }
 
+/* nagłówek - nawigacja */
 .header {
   background: #fefefe;
   top: 0px;
@@ -132,6 +140,7 @@ body {
   justify-content: center;
 }
 
+/* listy */
 .list {
   width: 80%;
   margin: 10px auto;
@@ -153,6 +162,7 @@ body {
   color: #343A40;
 }
 
+/* Sekcja Main */
 .main {
   width: 90vw;
   margin: 80px auto;
@@ -165,6 +175,7 @@ body {
   text-align: center;
 }
 
+/* Nawigacja - nagłówek */
 .navigation {
   background: #212529;
   margin: 10px;
@@ -183,6 +194,7 @@ body {
   color: #343A40;
 }
 
+/* Notesy */
 .notes {
   background: #6C757D;
   width: 90vw;
@@ -206,10 +218,13 @@ body {
   margin: 10px auto;
 }
 
+/* Selektor */
 .selektor {
   padding-left: 40px;
 }
 
+
+/* Tygodnie nauki*/
 .week {
   width: 60vw;
   background: #F8F9FA;

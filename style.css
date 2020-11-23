@@ -176,6 +176,15 @@ body {
   margin: 80px auto;
 }
 
+.main__description {
+  color: #6C757D;
+  background: #DEE2E6;
+  width: 80vw;
+  text-align: center;
+  margin: 5px auto;
+  border-radius: 16px;
+}
+
 .main__header {
   width: 80vw;
   margin: 10px auto;

@@ -17,3 +17,11 @@ console.log(heading.innerHTML)
 heading.innerHTML = 'Witaj świecie pisze do Ciebie za pośrednictwem javaScript';
 
 console.log(heading.innerHTML)
+
+const description = document.querySelector('.main__description--js');
+
+console.log(description.innerHTML)
+
+description.innerHTML = 'JavaScript ponownie wygenerowała ten nagłówek';
+
+console.log(description.innerHTML)

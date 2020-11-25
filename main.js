@@ -114,3 +114,27 @@ const showMeProperty = (myProperty) => {
 };
 
 showMeProperty("levels");
+
+const humanOne = {
+  name: "Maciek",
+  age: 32,
+};
+
+const humanTwo = {
+  name: "Stefan",
+  age: 32,
+};
+
+humanTwo.age = 35;
+
+console.log(humanTwo.age); // 35
+
+humanTwo.age = humanOne.age;
+
+console.log(humanOne); // {name: "Maciek", age: 32}
+console.log(humanTwo); //{name: "Stefan", age: 32}
+
+humanOne.age = 35;
+
+console.log(humanOne); // {name: "Maciek", age: 35}
+console.log(humanTwo); // {name: "Stefan", age: 32}

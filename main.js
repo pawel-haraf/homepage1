@@ -80,18 +80,18 @@ console.log(
 const deathStar = {
   diameter: 120000,
   fire: (target) => {
-   console.log(`${target} destroyed 💥`)
-   },
+    console.log(`${target} destroyed 💥`);
+  },
   isOperating: true,
   levels: 357,
-  name: 'Death Star',
+  name: "Death Star",
   population: 10000,
   isLightOn: true,
   commander: {
-    name: 'Darth Vader',
+    name: "Darth Vader",
     age: 44,
   },
-  }
+};
 
 console.log(deathStar);
 
@@ -100,17 +100,17 @@ console.log(deathStar.name);
 
 console.log(deathStar.commander.name);
 
-deathStar.fire('Rebel ship') // Rebel ship destroyed 💥
+deathStar.fire("Rebel ship"); // Rebel ship destroyed 💥
 
 //bracket notation
-console.log(deathStar['name']); // Death Star
+console.log(deathStar["name"]); // Death Star
 
 console.log(deathStar[name]); // undefinded
-const myProperty = 'name';
+const myProperty = "name";
 console.log(deathStar[myProperty]); // Death Star
 
 const showMeProperty = (myProperty) => {
   console.log(`Twoja własność ${myProperty} to: ${deathStar[myProperty]}`);
-}
+};
 
-showMeProperty('levels')
+showMeProperty("levels");

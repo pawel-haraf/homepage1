@@ -98,6 +98,7 @@
 /* Body */
 body {
   background: #F8F9FA;
+  margin: 0;
 }
 
 .code {
@@ -143,7 +144,8 @@ body {
 /* nagłówek - nawigacja */
 .header {
   background: #fefefe;
-  top: 0px;
+  top: 0;
+  width: 100vw;
   display: flex;
   position: fixed;
   align-items: center;
@@ -194,8 +196,8 @@ body {
 
 /* Nawigacja - nagłówek */
 .navigation {
+  width: 90%;
   background: #212529;
-  margin: 0 10px;
   padding: 16px;
   border-radius: 8px;
 }

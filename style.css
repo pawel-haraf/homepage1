@@ -168,6 +168,10 @@ body {
   width: 100%;
 }
 
+.list__item {
+  list-style: square;
+}
+
 .list__link {
   color: #343A40;
 }
@@ -242,6 +246,12 @@ body {
   padding-left: 40px;
 }
 
+/* Tabela */
+.table {
+  width: 100%;
+  color: #343A40;
+  border: 1px solid #212529;
+}
 
 /* Tygodnie nauki*/
 .week {

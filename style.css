@@ -1,6 +1,16 @@
 /* Sekcja o mnie */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .about {
-  background: #6C757D;
+  background: #6c757d;
   margin: 10px auto;
   width: 90vw;
   border-radius: 8px;
@@ -13,7 +23,7 @@
 }
 
 .about__header {
-  color: #CED4DA;
+  color: #ced4da;
   margin: 10px auto;
   text-align: center;
 }
@@ -25,7 +35,7 @@
 }
 
 .about__navigation {
-  color: #343A40;
+  color: #343a40;
 }
 
 /* artykuł */
@@ -44,7 +54,7 @@
 }
 
 .article__header {
-  color: #343A40;
+  color: #343a40;
   margin: 10px auto;
   padding-top: 16px;
   text-align: center;
@@ -57,7 +67,7 @@
 }
 
 .article__link {
-  color: #343A40;
+  color: #343a40;
   padding: 16px;
 }
 
@@ -68,7 +78,7 @@
   margin: 10px;
   height: 70vh;
   width: 25vw;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   border: 1px solid #06021d;
   border-radius: 8px;
   display: flex;
@@ -78,7 +88,7 @@
 }
 
 .aside__header {
-  color: #343A40;
+  color: #343a40;
   margin: 2px;
 }
 
@@ -92,13 +102,13 @@
 
 .aside__link {
   font-size: 12px;
-  color: #343A40;
+  color: #343a40;
   margin-bottom: 5px;
 }
 
 /* Body */
 body {
-  background: #F8F9FA;
+  background: #f8f9fa;
   margin: 0;
 }
 
@@ -121,7 +131,6 @@ body {
   margin: 10px 2px;
 }
 
-
 /* Stopka */
 .footer {
   background: #212529;
@@ -133,12 +142,12 @@ body {
 }
 
 .footer__description {
-  color: #E9ECEF;
+  color: #e9ecef;
   padding: 5px;
 }
 
 .footer__link {
-  color: #E9ECEF;
+  color: #e9ecef;
   padding-bottom: 10px;
 }
 
@@ -174,7 +183,7 @@ body {
 }
 
 .list__link {
-  color: #343A40;
+  color: #343a40;
 }
 
 /* Sekcja Main */
@@ -184,8 +193,8 @@ body {
 }
 
 .main__description {
-  color: #6C757D;
-  background: #DEE2E6;
+  color: #6c757d;
+  background: #dee2e6;
   width: 80vw;
   text-align: center;
   margin: 5px auto;
@@ -208,19 +217,19 @@ body {
 }
 
 .navigation__link {
-  color: #E9ECEF;
+  color: #e9ecef;
   display: inline-block;
   margin-right: 20px;
 }
 
 .navigation__link--homepage {
-  background: #E9ECEF;
-  color: #343A40;
+  background: #e9ecef;
+  color: #343a40;
 }
 
 /* Notesy */
 .notes {
-  background: #6C757D;
+  background: #6c757d;
   width: 90vw;
   margin: 10px auto;
   border-radius: 8px;
@@ -231,7 +240,7 @@ body {
 }
 
 .notes__header {
-  color: #CED4DA;
+  color: #ced4da;
   margin: 10px auto;
   text-align: center;
   justify-self: center;
@@ -250,14 +259,14 @@ body {
 /* Tabela */
 .table {
   width: 100%;
-  color: #343A40;
+  color: #343a40;
   border: 1px solid #212529;
 }
 
 /* Tygodnie nauki*/
 .week {
   width: 60vw;
-  background: #F8F9FA;
+  background: #f8f9fa;
   border: 1px #06021d solid;
   border-radius: 8px;
   margin: 10px 10px;

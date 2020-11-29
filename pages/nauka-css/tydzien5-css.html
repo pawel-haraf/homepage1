@@ -386,6 +386,143 @@
                 >Plac zabaw z flex'em</a
               >
             </article>
+            <article class="article" id="4">
+              <h4 class="article__header">CSS: Tła</h4>
+              <code class="code"> display: flex </code>
+              <p class="article__description">
+                Własności w CSS'ie związane z tłami zaczynają się od background
+                , funkcjonuje to jako osobna własność ( skrócona ), która
+                zawiera w sobie bardziej rozwinięte własności związanych z
+                tłami. Składa się ona z:
+              </p>
+              <ul class="list">
+                <li class="list__item">
+                  <code class="code"
+                    >background-image: url('sciezka-do-pliku')
+                  </code>
+                  - wstawia obrazek jako tło
+                </li>
+                <li class="list__item">
+                  <code class="code">background-position:</code> ustawia nam tło
+                  względem elementu, które to tło dostaje
+                  <ul class="list">
+                    <li class="list__item">
+                      0 0 (domyślna wartość górny lewy róg)
+                    </li>
+                    <li class="list__item">top right</li>
+                    <li class="list__item">bottom left</li>
+                    <li class="list__item">center center</li>
+                    <li class="list__item">xx% xx%</li>
+                    <li class="list__item">xxpx xxpx</li>
+                    <li class="list__item">… …</li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-repeat:</code>powtarzanie tła
+                  <ul class="list">
+                    <li class="list__item">repeat (domyśłna wartość)</li>
+                    <li class="list__item">
+                      repeat-x - powtarzane tylko w osi x
+                    </li>
+                    <li class="list__item">
+                      repeat-y - powtarzane tylko w osi y
+                    </li>
+                    <li class="list__item">no-repeat - nie powtarzane</li>
+                    <li class="list__item">round - otacza nasz element</li>
+                    <li class="list__item">
+                      space - nie przycina obrazka, tylko rozmieszcza go
+                      równomiernie elemencie
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-attachment:</code>
+                  sposób zachowania się tła w momencie przesuwania treści
+                  <ul class="list">
+                    <li class="list__item">
+                      scroll - przesuwa tło razem ze stroną (treścią)
+                    </li>
+                    <li class="list__item">
+                      fixed - tło nie rusza się, jest nieruchome
+                    </li>
+                    <li class="list__item">
+                      local - tło przesuwa się razem z treścią elementu (jeśli
+                      dla elementu nadana jest wysokość oraz overflow: scroll )
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-origin:</code>
+                  definiuje nam w którym miejscu nasze tło powinno się zaczynać
+                  <ul class="list">
+                    <li class="list__item">content-box</li>
+                    <li class="list__item">padding-box</li>
+                    <li class="list__item">border-box</li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-clip:</code>
+                  pokazuje w którym miejscu tło powinno być cięte
+                  <ul class="list">
+                    <li class="list__item">padding-box</li>
+                    <li class="list__item">border-box</li>
+                    <li class="list__item">content-box</li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-color:</code>
+                  wartość koloru;
+                  <ul class="list">
+                    <li class="list__item">
+                      rgba(255,255,255,0.4) tło może być pół przezroczyste,
+                      czwarta wartość określa stopień przezroczystości
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-size:</code>
+                  określa jakie duże ma być nasze tło
+                  <ul class="list">
+                    <li class="list__item">auto</li>
+                    <li class="list__item">
+                      cover - obrazek będzie wypełniać całe okno nie zależnie od
+                      rozmiaru okna
+                    </li>
+                    <li class="list__item">
+                      contain - będzie starał się wypełnić ekran w miarę jak
+                      będziemy zmniejszać/zwiększać wielkość okna i starając się
+                      umieścić całe zdjęcie
+                    </li>
+                    <li class="list__item">&lt;width&gt; &lt;height&gt;</li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  gradienty - fajną stroną do robienia gradientów jest:<br />
+                  <a
+                    href="https://cssgradient.io/gradient-backgrounds/"
+                    class="list__link"
+                  >
+                    gradient-backgrounds
+                  </a>
+                </li>
+                <li class="list__item">
+                  <code class="code">background:</code>
+                  <ul class="list">
+                    <li class="list__item">
+                      url(sweettexture.jpg) /* image */
+                    </li>
+                    <li class="list__item">
+                      top center / 200px 200px /* position / size */
+                    </li>
+                    <li class="list__item">no-repeat /* repeat */</li>
+                    <li class="list__item">fixed /* attachment */</li>
+                    <li class="list__item">padding-box /* origin */</li>
+                    <li class="list__item">content-box /* clip */</li>
+                    <li class="list__item">red ; /* color */</li>
+                  </ul>
+                </li>
+              </ul>
+            </article>
           </section>
         </section>
         <!-- Menu boczne-->
@@ -398,6 +535,7 @@
             </a>
             <a href="#2" class="aside__link"> Normalizacja vs reset </a>
             <a href="#3" class="aside__link"> Flexbox </a>
+            <a href="#4" class="aside__link"> Css: Tła </a>
           </nav>
         </section>
       </div>

@@ -1,0 +1,11 @@
+.page {
+    background-image: url('/img/rudawy-janowice-raszow.jpg');
+    min-height: 100vh;
+    background-position: center center;
+}
+
+.content {
+    background: #fff;
+    background-image: url('/img/dots.png');
+    background-repeat: repeat-x;
+}

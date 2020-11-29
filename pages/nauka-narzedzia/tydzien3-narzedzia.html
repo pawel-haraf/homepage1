@@ -7,7 +7,6 @@
     <link href="../../normalize.css" rel="stylesheet" type="text/css" />
     <link href="../../style.css" rel="stylesheet" type="text/css" />
   </head>
-
   <body>
     <!-- Nawigacja strony -->
     <header class="header">
@@ -33,423 +32,413 @@
       <header id="top">
         <h1 class="main__header">Moje narzędzia</h1>
       </header>
-
       <!-- Sekcja z notatkami-->
-      <section class="notes">
-        <h2 class="notes__header">Notatki WTF: Narzędzia</h2>
+      <div class="notes">
+        <!-- Notatki z tygodnia -->
+        <section class="diary">
+          <h2 class="notes__header">Notatki WTF: Narzędzia</h2>
+          <!-- Zawartość Sekcji -->
+          <section class="week">
+            <h3 class="week__header">Tydzień III 27.04.-03.05.2020 r.</h3>
 
-        <div class="notes__content">
-          <!-- Notatki z tygodnia -->
-          <section class="diary">
-            <!-- Zawartość Sekcji -->
-            <section class="week">
-              <h3 class="week__header">Tydzień III 27.04.-03.05.2020 r.</h3>
+            <!-- Artykuły -->
+            <article class="article" id="1">
+              <h4 class="article__header">Kanban</h4>
 
-              <!-- Artykuły -->
-              <article class="article" id="1">
-                <h4 class="article__header">Kanban</h4>
+              <p class="article__description">
+                KANBAN po japońsku znaczy spis widoczny
+              </p>
 
-                <p class="article__description">
-                  KANBAN po japońsku znaczy spis widoczny
-                </p>
+              <p class="article__description">
+                Metoda ta pozwala na organizację pracy. Opiera się na podziale
+                na 3 kolumny czasami na więcej, a te kolumny to:
+              </p>
 
-                <p class="article__description">
-                  Metoda ta pozwala na organizację pracy. Opiera się na podziale
-                  na 3 kolumny czasami na więcej, a te kolumny to:
+              <ul class="list">
+                <li class="list__item">TODO = do zrobienia</li>
+
+                <li class="list__item">DOING = w trakcie</li>
+
+                <li class="list__item">DONE = zrobione</li>
+              </ul>
+
+              <p class="article__description">
+                Może być jeszcze więcej kolumn:
+              </p>
+
+              <ul class="list">
+                <li class="list__item">Testing - testowanie</li>
+
+                <li class="list__item">inReview - do przejrzenia</li>
+              </ul>
+
+              <p class="article__description">Kanban - podsumowanie metody:</p>
+
+              <ul class="list">
+                <li class="list__item">
+                  Ułatwia śledzenie postępu prac / nauki
+                </li>
+
+                <li class="list__item">
+                  Zalecane trzymanie jednego zadania w "doing"
+                </li>
+
+                <li class="list__item">Dobrze opisuj "definition of done"</li>
+
+                <li class="list__item">Można stosować offline</li>
+
+                <li class="list__item">
+                  Online za darmo możesz przygotować swoją tablicę na
+                  <a href="https://trello.com" class="list__link">trello.com</a>
+                </li>
+              </ul>
+            </article>
+            <article class="article">
+              <h4 class="article__header">
+                Jak działa internet i przeglądarka?
+              </h4>
+
+              <p class="article__description">
+                Przeglądarki korzystają z protokołu HTTP (w większości
+                przypadków). Dzięki niemu mogą pobrać wszystkie pliki i je
+                wyświetlić na ekranie monitora.
+              </p>
+
+              <p class="article__description">
+                HTTP to w rozwinięciu Hypertext Transfer Protocol czyli jest to
+                protokół do transportowania html'a i całej reszty.
+              </p>
+
+              <p class="article__description">
+                Jest też coś takiego jak HTTPS czyli Hypertext Transfer Protocol
+                Secure i jest on bezpieczniejszy, ponieważ jest szyfrowanym
+                protokołem. TO jest "połączenie z kłódką". Jest rekomendowane
+                żeby wszędzie korzystać z tego protokołu. Zasada działania jest
+                praktycznie taka sama jak HTML.
+              </p>
+
+              <p class="article__description">
+                URL czyli Uniform Resoure Locator czyli adres, który wpisujemy.
+              </p>
+
+              <img
+                class="article__image"
+                src="/img/url.png"
+                alt="co się skłąda na adres URL"
+              />
+
+              <p class="article__description">
+                Co się dzieje w momencie wpisywania adresu strony w
+                przeglądarce?
+              </p>
+
+              <ol class="list">
+                <li class="list__item">
+                  wpisuję w pasku adresu
+                  <a href="cotenfronted.pl" class="list__link"
+                    >cotenfronted.pl</a
+                  >
+                  [enter]
+                </li>
+
+                <li class="list__item">
+                  przeglądarka szuka serwera
+                  <a href="cotenfrontend.pl" class="list__link"
+                    >cotenfronted.pl</a
+                  >
+                  [DNS]
+                </li>
+
+                <li class="list__item">
+                  po znalezieniu serwera odpytuje go o index (jeśli podamy sam
+                  adres serwera) - to co jest indexem zależy od konfiguracji
+                  serwera (nie musi to by c index.html, choć w przypadku stron
+                  statycznych jest to najczęstszy przypadek)
+                </li>
+
+                <li class="list__item">
+                  serwer wysyła do przeglądarki zawartość html
+                </li>
+
+                <li class="list__item">
+                  przeglądarka wczytuje html i szuka wszystkich dodatkowych
+                  zasobów: style, skrypty, obrazki itp. i dla każdego z zasobów
+                  wykonuje zapytanie
+                </li>
+
+                <li class="list__item">
+                  przeglądarka parsuje i renderuje stronę
+                </li>
+              </ol>
+
+              <p class="article__description">
+                Komunikacja między serwerem, a przeglądarką jest w modelu
+                request - response (zapytanie - odpowiedź). Czyli przeglądarka o
+                coś pyta serwer, a ten wysyła jej informację zwrotną.
+              </p>
+
+              <p class="article__description">
+                Narzędzia deweloperskie w Chrome'ie dają nam możliwość
+                podejrzenia jak funkcjonuje komunikacja między przeglądarką, a
+                serwerem. Możemy to podejrzeć w zakładce network. Widać tam co
+                się w jakim momencie ładowało w przeglądarce. 🙂
+              </p>
+
+              <p class="article__description">Kody odpowiedzi HTTP:</p>
+
+              <ul class="list">
+                <li class="list__item">
+                  200 - OK, gdy dany zasób znajduje się na serwerze
+                </li>
+
+                <li class="list__item">
+                  30x - szukasz w złym miejscu - przekieruję Cię w dobre (bo
+                  wiem gdzie)
+                </li>
+
+                <li class="list__item">
+                  404 - nie mam tego czego potrzebujesz. Sorry
+                </li>
+
+                <li class="list__item">
+                  50x - Nie czuję się najlepiej. Błąd wewnętrzny serwera.
+                </li>
+              </ul>
+
+              <p class="article__description">
+                Czym jest <em class="em">root</em> (/)?
+              </p>
+
+              <p class="article__description">
+                "/" mówi nam, którym miejscu przeglądarka musi szukać zasobu. Ma
+                on znaczenie przy odwołaniu do ścieżki względnej i niewzględnej.
+                Czyli w odwołaniu do obrazka przed lokalizacją obrazka użyjemy /
+                (np. src="/img/wtf.svg") to on się zawsze otworzy, Bez względu
+                na to czy będziemy wchodzić przez stronę główną lub podstronę.
+                Jest to odwołanie bezwzględna.
+              </p>
+
+              <p class="article__description">
+                Jeśli przed lokalizacją obrazka nie użyjemy "/" (np.
+                src="img/wtf.svg") to obrazek otworzy się tylko wchodząc przez
+                stronę główną. Dzieje się tak ponieważ w drugim przypadku
+                ścieżka jest dopisywana do podstrony i szuka wtedy przeglądarka
+                pliku w złym miejscu.
+              </p>
+
+              <p class="article__description">
+                Tworząc stronę uruchamianą "z dysku" pomijamy używanie slasha z
+                przodu.
+              </p>
+
+              <p class="article__description">Posumowanie:</p>
+
+              <ul class="list">
+                <li class="list__item">
+                  protokół który obsługuje strony internetowe i ich zawartość to
+                  HTTP (aktualnie coraz częściej HTTP/2)
+                </li>
+
+                <li class="list__item">
+                  komunikacja przeglądarka - serwer odbywa się na zasadach
+                  request - response
+                </li>
+
+                <li class="list__item">
+                  odpowiedzi serwera mają różne kody (i pozwala nam to na
+                  diagnozowanie problemów)
+                </li>
+
+                <li class="list__item">
+                  root (/) jest istotną częścią ścieżek do zasobów (i dobrze
+                  wiedzieć jak działa 🙂 )
+                </li>
+              </ul>
+            </article>
+            <article class="article">
+              <h4 class="article__header">WTF: Terminal</h4>
+
+              <p class="article__description">
+                Każdy z systemów operacyjnych posiada swój terminal. MacOs i
+                linux mają terminale bardzo podobne, a Windows ma swój poleceń,
+                który trochę odstaje od terminali z innych systemów. W szkoleniu
+                WTF: Co ten frontend poznajemy obsługę wszystkich tych
+                terminali, z różnych systemów.
+              </p>
+
+              <p class="article__description">
+                Przed przystąpieniem do pracy w terminalu trzeba skonfigurować
+                VSC, tak aby mógł dobrze współpracować z terminalem. Pomocna w
+                tym będzie poniższa komend, którą trzeba będzie wpisać po
+                kliknięciu ctrl+shift+p:
+              </p>
+
+              <code class="code">
+                Shell Command: Install 'code' command in PATH
+              </code>
+
+              <section class="section">
+                <h5 class="section__header">
+                  Polecenia terminala w systemie Windows
+                </h5>
+
+                <p class="section__description">
+                  Żeby odpalić terminal na Windzie wchodzimy w menu Start i
+                  zaczynamy wpisywać cmd. Otworzy się nam wiersz poleceń
+                  (Windowsowy odpowiednik terminala) i możemy już kontynuować
+                  pracę z terminale używając poniższych komend.
                 </p>
 
                 <ul class="list">
-                  <li class="list__item">TODO = do zrobienia</li>
+                  <li class="list__item">
+                    <code class="code">cd C:\</code> - przejście do głównego
+                    katalogu na dysku C,
+                  </li>
 
-                  <li class="list__item">DOING = w trakcie</li>
+                  <li class="list__item">
+                    <code class="code">dir</code> - wypisanie zawartości
+                    katalogu.
+                  </li>
 
-                  <li class="list__item">DONE = zrobione</li>
+                  <li class="list__item">
+                    <code class="code">cd ..</code> - przejście do katalogu
+                    wyżej,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">cd nazwa-katalogu</code> - przejście do
+                    katalogu o nazwie nazwa-katalogu,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">code .</code> - uruchomienie visual
+                    studio code w aktualnym katalogu,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">cd</code> - wyświetlenie aktualnej
+                    ścieżki,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">mkdir nazwa-katalogu</code> - stworzenie
+                    katalogu o nazwie nazwa-katalogu
+                  </li>
                 </ul>
+              </section>
+              <section class="section">
+                <h5 class="section__header">
+                  Polecenia terminala w systemie MacOs
+                </h5>
 
-                <p class="article__description">
-                  Może być jeszcze więcej kolumn:
+                <p class="section__description">
+                  Żeby odpalić terminal an Mac'u wciskamy kombinację klawiszy
+                  command+spacja. Otworzy się okno o nazwie spotlight search i
+                  wpisujemy: terminal. Otworzy się nam terminal i możemy już
+                  kontynuować pracę z terminale używając poniższych komend.
                 </p>
 
                 <ul class="list">
-                  <li class="list__item">Testing - testowanie</li>
+                  <li class="list__item">
+                    <code class="code">cd ~</code> - przejście do głównego
+                    katalogu na dysku C,
+                  </li>
 
-                  <li class="list__item">inReview - do przejrzenia</li>
+                  <li class="list__item">
+                    <code class="code">ls</code> - wypisanie zawartości
+                    katalogu.
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">cd ..</code> - przejście do katalogu
+                    wyżej,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">cd nazwa-katalogu</code> - przejście do
+                    katalogu o nazwie nazwa-katalogu,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">code .</code> - uruchomienie visual
+                    studio code w aktualnym katalogu,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">pwd</code> - wyświetlenie aktualnej
+                    ścieżki,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">mkdir nazwa-katalogu</code> - stworzenie
+                    katalogu o nazwie nazwa-katalogu
+                  </li>
                 </ul>
+              </section>
 
-                <p class="article__description">
-                  Kanban - podsumowanie metody:
+              <section class="section">
+                <h5 class="section__header">
+                  Polecenia terminala w systemie Linux
+                </h5>
+
+                <p class="section__description">
+                  Żeby odpalić terminal na Linux'ie wybieramy Terminal w
+                  Odpalaczu aplikacji. Otworzy się nam terminal i możemy już
+                  kontynuować pracę z terminale używając poniższych komend.
                 </p>
 
                 <ul class="list">
                   <li class="list__item">
-                    Ułatwia śledzenie postępu prac / nauki
+                    <code class="code">cd ~</code> - przejście do głównego
+                    katalogu na dysku C,
                   </li>
 
                   <li class="list__item">
-                    Zalecane trzymanie jednego zadania w "doing"
+                    <code class="code">ls</code> - wypisanie zawartości
+                    katalogu.
                   </li>
 
-                  <li class="list__item">Dobrze opisuj "definition of done"</li>
-
-                  <li class="list__item">Można stosować offline</li>
+                  <li class="list__item">
+                    <code class="code">cd ..</code> - przejście do katalogu
+                    wyżej,
+                  </li>
 
                   <li class="list__item">
-                    Online za darmo możesz przygotować swoją tablicę na
-                    <a href="https://trello.com" class="list__link"
-                      >trello.com</a
-                    >
+                    <code class="code">cd nazwa-katalogu</code> - przejście do
+                    katalogu o nazwie nazwa-katalogu,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">code .</code> - uruchomienie visual
+                    studio code w aktualnym katalogu,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">pwd</code> - wyświetlenie aktualnej
+                    ścieżki,
+                  </li>
+
+                  <li class="list__item">
+                    <code class="code">mkdir nazwa-katalogu</code> - stworzenie
+                    katalogu o nazwie nazwa-katalogu
                   </li>
                 </ul>
-              </article>
-              <article class="article">
-                <h4 class="article__header">
-                  Jak działa internet i przeglądarka?
-                </h4>
-
-                <p class="article__description">
-                  Przeglądarki korzystają z protokołu HTTP (w większości
-                  przypadków). Dzięki niemu mogą pobrać wszystkie pliki i je
-                  wyświetlić na ekranie monitora.
-                </p>
-
-                <p class="article__description">
-                  HTTP to w rozwinięciu Hypertext Transfer Protocol czyli jest
-                  to protokół do transportowania html'a i całej reszty.
-                </p>
-
-                <p class="article__description">
-                  Jest też coś takiego jak HTTPS czyli Hypertext Transfer
-                  Protocol Secure i jest on bezpieczniejszy, ponieważ jest
-                  szyfrowanym protokołem. TO jest "połączenie z kłódką". Jest
-                  rekomendowane żeby wszędzie korzystać z tego protokołu. Zasada
-                  działania jest praktycznie taka sama jak HTML.
-                </p>
-
-                <p class="article__description">
-                  URL czyli Uniform Resoure Locator czyli adres, który
-                  wpisujemy.
-                </p>
-
-                <img
-                  class="article__image"
-                  src="/img/url.png"
-                  alt="co się skłąda na adres URL"
-                />
-
-                <p class="article__description">
-                  Co się dzieje w momencie wpisywania adresu strony w
-                  przeglądarce?
-                </p>
-
-                <ol class="list">
-                  <li class="list__item">
-                    wpisuję w pasku adresu
-                    <a href="cotenfronted.pl" class="list__link"
-                      >cotenfronted.pl</a
-                    >
-                    [enter]
-                  </li>
-
-                  <li class="list__item">
-                    przeglądarka szuka serwera
-                    <a href="cotenfrontend.pl" class="list__link"
-                      >cotenfronted.pl</a
-                    >
-                    [DNS]
-                  </li>
-
-                  <li class="list__item">
-                    po znalezieniu serwera odpytuje go o index (jeśli podamy sam
-                    adres serwera) - to co jest indexem zależy od konfiguracji
-                    serwera (nie musi to by c index.html, choć w przypadku stron
-                    statycznych jest to najczęstszy przypadek)
-                  </li>
-
-                  <li class="list__item">
-                    serwer wysyła do przeglądarki zawartość html
-                  </li>
-
-                  <li class="list__item">
-                    przeglądarka wczytuje html i szuka wszystkich dodatkowych
-                    zasobów: style, skrypty, obrazki itp. i dla każdego z
-                    zasobów wykonuje zapytanie
-                  </li>
-
-                  <li class="list__item">
-                    przeglądarka parsuje i renderuje stronę
-                  </li>
-                </ol>
-
-                <p class="article__description">
-                  Komunikacja między serwerem, a przeglądarką jest w modelu
-                  request - response (zapytanie - odpowiedź). Czyli przeglądarka
-                  o coś pyta serwer, a ten wysyła jej informację zwrotną.
-                </p>
-
-                <p class="article__description">
-                  Narzędzia deweloperskie w Chrome'ie dają nam możliwość
-                  podejrzenia jak funkcjonuje komunikacja między przeglądarką, a
-                  serwerem. Możemy to podejrzeć w zakładce network. Widać tam co
-                  się w jakim momencie ładowało w przeglądarce. 🙂
-                </p>
-
-                <p class="article__description">Kody odpowiedzi HTTP:</p>
-
-                <ul class="list">
-                  <li class="list__item">
-                    200 - OK, gdy dany zasób znajduje się na serwerze
-                  </li>
-
-                  <li class="list__item">
-                    30x - szukasz w złym miejscu - przekieruję Cię w dobre (bo
-                    wiem gdzie)
-                  </li>
-
-                  <li class="list__item">
-                    404 - nie mam tego czego potrzebujesz. Sorry
-                  </li>
-
-                  <li class="list__item">
-                    50x - Nie czuję się najlepiej. Błąd wewnętrzny serwera.
-                  </li>
-                </ul>
-
-                <p class="article__description">
-                  Czym jest <em class="em">root</em> (/)?
-                </p>
-
-                <p class="article__description">
-                  "/" mówi nam, którym miejscu przeglądarka musi szukać zasobu.
-                  Ma on znaczenie przy odwołaniu do ścieżki względnej i
-                  niewzględnej. Czyli w odwołaniu do obrazka przed lokalizacją
-                  obrazka użyjemy / (np. src="/img/wtf.svg") to on się zawsze
-                  otworzy, Bez względu na to czy będziemy wchodzić przez stronę
-                  główną lub podstronę. Jest to odwołanie bezwzględna.
-                </p>
-
-                <p class="article__description">
-                  Jeśli przed lokalizacją obrazka nie użyjemy "/" (np.
-                  src="img/wtf.svg") to obrazek otworzy się tylko wchodząc przez
-                  stronę główną. Dzieje się tak ponieważ w drugim przypadku
-                  ścieżka jest dopisywana do podstrony i szuka wtedy
-                  przeglądarka pliku w złym miejscu.
-                </p>
-
-                <p class="article__description">
-                  Tworząc stronę uruchamianą "z dysku" pomijamy używanie slasha
-                  z przodu.
-                </p>
-
-                <p class="article__description">Posumowanie:</p>
-
-                <ul class="list">
-                  <li class="list__item">
-                    protokół który obsługuje strony internetowe i ich zawartość
-                    to HTTP (aktualnie coraz częściej HTTP/2)
-                  </li>
-
-                  <li class="list__item">
-                    komunikacja przeglądarka - serwer odbywa się na zasadach
-                    request - response
-                  </li>
-
-                  <li class="list__item">
-                    odpowiedzi serwera mają różne kody (i pozwala nam to na
-                    diagnozowanie problemów)
-                  </li>
-
-                  <li class="list__item">
-                    root (/) jest istotną częścią ścieżek do zasobów (i dobrze
-                    wiedzieć jak działa 🙂 )
-                  </li>
-                </ul>
-              </article>
-              <article class="article">
-                <h4 class="article__header">WTF: Terminal</h4>
-
-                <p class="article__description">
-                  Każdy z systemów operacyjnych posiada swój terminal. MacOs i
-                  linux mają terminale bardzo podobne, a Windows ma swój
-                  poleceń, który trochę odstaje od terminali z innych systemów.
-                  W szkoleniu WTF: Co ten frontend poznajemy obsługę wszystkich
-                  tych terminali, z różnych systemów.
-                </p>
-
-                <p class="article__description">
-                  Przed przystąpieniem do pracy w terminalu trzeba skonfigurować
-                  VSC, tak aby mógł dobrze współpracować z terminalem. Pomocna w
-                  tym będzie poniższa komend, którą trzeba będzie wpisać po
-                  kliknięciu ctrl+shift+p:
-                </p>
-
-                <code class="code">
-                  Shell Command: Install 'code' command in PATH
-                </code>
-
-                <section class="section">
-                  <h5 class="section__header">
-                    Polecenia terminala w systemie Windows
-                  </h5>
-
-                  <p class="section__description">
-                    Żeby odpalić terminal na Windzie wchodzimy w menu Start i
-                    zaczynamy wpisywać cmd. Otworzy się nam wiersz poleceń
-                    (Windowsowy odpowiednik terminala) i możemy już kontynuować
-                    pracę z terminale używając poniższych komend.
-                  </p>
-
-                  <ul class="list">
-                    <li class="list__item">
-                      <code class="code">cd C:\</code> - przejście do głównego
-                      katalogu na dysku C,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">dir</code> - wypisanie zawartości
-                      katalogu.
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">cd ..</code> - przejście do katalogu
-                      wyżej,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">cd nazwa-katalogu</code> - przejście do
-                      katalogu o nazwie nazwa-katalogu,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">code .</code> - uruchomienie visual
-                      studio code w aktualnym katalogu,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">cd</code> - wyświetlenie aktualnej
-                      ścieżki,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">mkdir nazwa-katalogu</code> -
-                      stworzenie katalogu o nazwie nazwa-katalogu
-                    </li>
-                  </ul>
-                </section>
-                <section class="section">
-                  <h5 class="section__header">
-                    Polecenia terminala w systemie MacOs
-                  </h5>
-
-                  <p class="section__description">
-                    Żeby odpalić terminal an Mac'u wciskamy kombinację klawiszy
-                    command+spacja. Otworzy się okno o nazwie spotlight search i
-                    wpisujemy: terminal. Otworzy się nam terminal i możemy już
-                    kontynuować pracę z terminale używając poniższych komend.
-                  </p>
-
-                  <ul class="list">
-                    <li class="list__item">
-                      <code class="code">cd ~</code> - przejście do głównego
-                      katalogu na dysku C,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">ls</code> - wypisanie zawartości
-                      katalogu.
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">cd ..</code> - przejście do katalogu
-                      wyżej,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">cd nazwa-katalogu</code> - przejście do
-                      katalogu o nazwie nazwa-katalogu,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">code .</code> - uruchomienie visual
-                      studio code w aktualnym katalogu,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">pwd</code> - wyświetlenie aktualnej
-                      ścieżki,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">mkdir nazwa-katalogu</code> -
-                      stworzenie katalogu o nazwie nazwa-katalogu
-                    </li>
-                  </ul>
-                </section>
-
-                <section class="section">
-                  <h5 class="section__header">
-                    Polecenia terminala w systemie Linux
-                  </h5>
-
-                  <p class="section__description">
-                    Żeby odpalić terminal na Linux'ie wybieramy Terminal w
-                    Odpalaczu aplikacji. Otworzy się nam terminal i możemy już
-                    kontynuować pracę z terminale używając poniższych komend.
-                  </p>
-
-                  <ul class="list">
-                    <li class="list__item">
-                      <code class="code">cd ~</code> - przejście do głównego
-                      katalogu na dysku C,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">ls</code> - wypisanie zawartości
-                      katalogu.
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">cd ..</code> - przejście do katalogu
-                      wyżej,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">cd nazwa-katalogu</code> - przejście do
-                      katalogu o nazwie nazwa-katalogu,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">code .</code> - uruchomienie visual
-                      studio code w aktualnym katalogu,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">pwd</code> - wyświetlenie aktualnej
-                      ścieżki,
-                    </li>
-
-                    <li class="list__item">
-                      <code class="code">mkdir nazwa-katalogu</code> -
-                      stworzenie katalogu o nazwie nazwa-katalogu
-                    </li>
-                  </ul>
-                </section>
-              </article>
-            </section>
+              </section>
+            </article>
           </section>
-
-          <!-- Menu boczne-->
-          <section class="aside">
-            <h3 class="aside__header">Spis treści</h3>
-            <nav class="aside__navigation">
-              <a href="#1" class="aside__link">Kanban</a>
-              <a href="#2" class="aside__link"
-                >Jak działa internet i przeglądarka?</a
-              >
-              <a href="#3" class="aside__link">WTF: Terminal</a>
-            </nav>
-          </section>
-        </div>
-      </section>
+        </section>
+        <!-- Menu boczne-->
+        <section class="aside">
+          <h3 class="aside__header">Spis treści</h3>
+          <nav class="aside__navigation">
+            <a href="#1" class="aside__link">Kanban</a>
+            <a href="#2" class="aside__link"
+              >Jak działa internet i przeglądarka?</a
+            >
+            <a href="#3" class="aside__link">WTF: Terminal</a>
+          </nav>
+        </section>
+      </div>
     </main>
     <!-- Stopka -->
     <footer class="footer">

@@ -233,11 +233,9 @@ body {
   width: 90vw;
   margin: 10px auto;
   border-radius: 8px;
-}
-
-.notes__content {
   display: flex;
 }
+
 
 .notes__header {
   color: #ced4da;

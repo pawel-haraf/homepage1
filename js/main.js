@@ -129,7 +129,7 @@ humanTwo.age = 35;
 
 console.log(humanTwo.age); // 35
 
-humanTwo.age = humanOne.age;
+humanTwo.age = humanTwo.age;
 
 console.log(humanOne); // {name: "Maciek", age: 32}
 console.log(humanTwo); //{name: "Stefan", age: 32}
@@ -138,3 +138,58 @@ humanOne.age = 35;
 
 console.log(humanOne); // {name: "Maciek", age: 35}
 console.log(humanTwo); // {name: "Stefan", age: 32}
+
+// JavaScript: Logika
+
+if ("JavaScript" != "Java") {
+  // wykonaj kod jeśli true
+  console.log(`Java to nie JavaScript`);
+}
+
+if (humanOne.age > humanTwo.age) {
+  console.log("Human one jest starszy");
+}
+
+if (humanOne.age === humanTwo.age) {
+  console.log("Są równolatkami");
+}
+
+if (humanOne.age < humanTwo.age) {
+  console.log("Human two jest starszy");
+}
+//Warunki logiczne
+
+if (humanTwo.age === 35 && humanTwo.name) {
+  console.log("To się wykona");
+}
+
+if (humanOne.age > humanTwo.age) {
+  console.log("Human one jest starszy");
+} else {
+  console.log("Human two jest starszy lub są równolatkami");
+}
+
+if (humanOne.age > humanTwo.age) {
+  console.log("Human one jest starszy");
+} else if (humanOne.age === humanTwo) {
+  console.log("Są równolatkami");
+} else {
+  console.log("Human two jest starszy");
+}
+
+const myVariable = 7;
+
+switch (myVariable) {
+  case 4:
+    console.log("hi 4");
+    break;
+  case 8:
+    console.log("hi 8");
+    break;
+  default:
+    console.log("default response");
+}
+
+//Zapis skrócony // funkcja if i else
+
+(32 > 20) ? console.log('to prawda') : console.log('to nieprawda');

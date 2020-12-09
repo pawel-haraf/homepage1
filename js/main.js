@@ -193,3 +193,17 @@ switch (myVariable) {
 //Zapis skrócony // funkcja if i else
 
 (32 > 20) ? console.log('to prawda') : console.log('to nieprawda');
+
+// JS: Eventy
+
+const button = document.querySelector(".action--js");
+
+console.log(button);
+
+const myClik = () => {
+  const heading = document.querySelector(".main__header--js");
+  heading.innerHTML = "Nagłówek zmieniony za pomocą JavaScript po naciśnięciu buttona";
+
+}
+
+button.addEventListener('click', myClik);

@@ -158,6 +158,20 @@ body {
   padding-bottom: 10px;
 }
 
+/* Hamburger menu */
+
+.hamburger {
+  position: absolute;
+  top: 20x;
+  right: 10px;
+  border: none;
+  background: none;
+}
+
+.klasa-z-js {
+  background: yellow;
+}
+
 /* nagłówek - nawigacja */
 .header {
   background: #fefefe;
@@ -168,6 +182,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 100;
+  min-height: 60px;
 }
 
 /* listy */
@@ -217,19 +232,19 @@ body {
 
 /* Nawigacja - nagłówek */
 .navigation {
-  width: 90%;
-  background: #212529;
   padding: 16px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: none;
+  background: #212529;
 }
 
 .navigation__link {
   color: #e9ecef;
-  display: inline-block;
-  margin-right: 20px;
+  display: block;
+  margin: 0 0 16px 0;
+}
+
+.navigation--open {
+  display: block;
 }
 
 .navigation__link--homepage {
@@ -289,4 +304,33 @@ body {
   color: #212529;
   margin: 10px auto;
   text-align: center;
+}
+
+/* Media queries */
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    width: 90%;
+    background: #212529;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .navigation__link {
+    color: #e9ecef;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .navigation__link--homepage {
+    background: #e9ecef;
+    color: #343a40;
+  }
 }

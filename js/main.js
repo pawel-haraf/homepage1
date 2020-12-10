@@ -192,7 +192,7 @@ switch (myVariable) {
 
 //Zapis skrócony // funkcja if i else
 
-(32 > 20) ? console.log('to prawda') : console.log('to nieprawda');
+32 > 20 ? console.log("to prawda") : console.log("to nieprawda");
 
 // JS: Eventy
 
@@ -202,8 +202,19 @@ console.log(button);
 
 const myClik = () => {
   const heading = document.querySelector(".main__header--js");
-  heading.innerHTML = "Nagłówek zmieniony za pomocą JavaScript po naciśnięciu buttona";
+  heading.innerHTML =
+    "Nagłówek zmieniony za pomocą JavaScript po naciśnięciu buttona";
+  heading.classList.toggle('klasa-z-js');
+};
 
-}
+button.addEventListener("click", myClik);
 
-button.addEventListener('click', myClik);
+
+// JS: Hamburger menu
+
+const hamburger = document.querySelector('.hamburger--js');
+
+hamburger.addEventListener('click', () => {
+  const nav = document.querySelector('.navigation--js');
+  nav.classList.toggle('navigation--open')
+})

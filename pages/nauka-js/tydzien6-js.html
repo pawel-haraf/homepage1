@@ -217,6 +217,127 @@
                 >
               </p>
             </article>
+            <article class="article" id="2">
+              <h4 class="article__header">JS: Eventy</h4>
+              <h5 class="article__header">Algorytm</h5>
+              <p class="article__description">
+                Przepis na przycisk zmieniający nagłówek
+              </p>
+              <ol class="list-order">
+                <li class="list-order__item">Przycisk</li>
+                <li class="list-order__item">Nagłówek</li>
+                <li class="list-order__item">
+                  Kod js który obsłuży kliknięcie.
+                </li>
+                <li class="list-order__item">
+                  Kod js który zmieni treść nagłówka
+                </li>
+              </ol>
+              <h5 class="article__header">
+                <code class="code">&lt;button&gt;</code> znacznik przycisku
+              </h5>
+              <p class="article__description">Czym się różni button od a?</p>
+              <ul class="list">
+                <li class="article__description">
+                  button wykonuje jakąś interakcję na stronie (wysyłanie
+                  formularza , otworzenie menu
+                </li>
+                <li class="article__description">
+                  a jest wykorzystywany do nawigacji
+                </li>
+              </ul>
+              <h5 class="article__header">Event Listener</h5>
+              <p class="article__description">
+                Funkcję
+                <code class="code"
+                  >element.addEventListener(type, listener [, options])</code
+                >
+                wywołujemy ją na jakimś elemencie, który pobieramy za pomocą
+                <code class="code">query.selector</code>'a
+              </p>
+              <p class="article__description">
+                Type dla event listenera (czyli funkcji powyższej) może
+                przyjmować różne wartości. Np. dla myszki może przyjmować
+                zdarzenia:
+              </p>
+              <ul class="list">
+                <li class="list__item">
+                  mouse events
+                  <ul class="list">
+                    <li class="list__item">click</li>
+                    <li class="list__item">
+                      <code class="class">mouseenter</code> najechanie myszką
+                    </li>
+                    <li class="list__item">
+                      <code class="code">mouseleave</code>zjechanie myszką
+                    </li>
+                    <li class="list__item">
+                      <code class="code">mouseover</code> podobne zachowanie jak
+                      przy najechaniu myszką
+                    </li>
+                    <li class="list__item">...</li>
+                    <li class="list__item">
+                      więcej akcji znajdziemy pod adresem:
+                      <a
+                        class="article__link"
+                        href="https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events"
+                        >https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </article>
+            <article class="article" id="3">
+              <h4 class="article__header">JS: Hamburger menu 🍔</h4>
+              <h5 class="article__header">Przepis Algorytm na hamburger menu</h5>
+              <ol class="list-order">
+                <li class="list-order__item">
+Nawigacja
+                </li>
+                <li class="list-order__item">
+                  Style do nawigacji na mobile
+                </li>
+                <li class="list-order__item">
+                  Style do nawigacji na desktop
+                </li>
+                <li class="list-order__item">
+                  Przycisk do pokazywania/ukrywania (zmiana klasy)
+                </li>
+                <li class="list-order__item">
+                  Kod js do podpięcia się pod przycisk
+                </li>
+                <li class="list-order__item">
+                  Kod js do zmiany klasy
+                </li>
+              </ol>
+              <p class="article__description">
+                Zmienianie, dodawanie lub usuwanie klasy obiektu przez kod JavaScript'owy jest możliwe dzięki funkcji 
+                <code class="code">classList</code>
+              </p>
+              <p class="article__description">
+                element.classList
+              </p>
+              <ul class="list">
+                <li class="list__item">
+                  <code class="code">add</code>dodaje klasę do elementu
+                </li>
+                <li class="list__item">
+                  <code class="code">remove</code>usuwa klasę z elementu
+                </li>
+                <li class="list__item">
+                  <code class="code">toggle</code>
+                  dodaje/usuwa klasę do elementu, w zależności czy dana klasa jest w tym elemencie, czy jej nie ma
+                </li>
+                <li class="list__item">
+                  <code class="code">contains</code>
+                  sprawdza czy dana klasa jest w elemencie i zwraca wartość logiczną
+                </li>
+              </ul>
+              <p class="article__description">
+                atrybut <code class="code">aria-label="Otwórz menu"</code> opisuje rzeczy
+              </p>
+            </article>
           </section>
         </section>
         <!-- Menu boczne-->
@@ -224,6 +345,8 @@
           <h3 class="aside__header">Spis treści</h3>
           <nav class="aside__navigation">
             <a href="#1" class="aside__link">JavaScript: Logika</a>
+            <a href="#2" class="aside__link">JavaScript: Eventy</a>
+            <a href="#3" class="aside__link">JavaScript: Hamburger menu</a>
           </nav>
         </section>
       </div>

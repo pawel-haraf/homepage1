@@ -29,7 +29,9 @@
           >Nauka - Narzędzia</a
         >
       </nav>
-      <button class="hamburger hamburger--js" aria-label="Otwórz menu">🍔</button>
+      <button class="hamburger hamburger--js" aria-label="Otwórz menu">
+        🍔
+      </button>
     </header>
     <!-- Część główna strony -->
     <main class="main">
@@ -64,10 +66,10 @@
         </p>
       </section>
       <!-- Sekcja z notatkami-->
-      <div class="notes">
+      <section class="notes">
+        <h2 class="notes__header">Notatki z WTF: Co ten frontend?</h2>
         <!-- Notatki z tygodnia -->
-        <section class="diary">
-          <h2 class="notes__header">Notatki z WTF: Co ten frontend?</h2>
+        <div class="diary">
           <!-- Zawartość Sekcji -->
           <section class="week" id="week1">
             <h3 class="week__header">Tydzień I 13.04.-19.04.2020 r.</h3>
@@ -433,7 +435,11 @@
                     </li>
                     <li class="order-list__item">
                       Przejdź flexbox froggy
-                      <a class="order-list__link" href="https://flexboxfroggy.com/#pl">Flexbox Froggy</a>
+                      <a
+                        class="order-list__link"
+                        href="https://flexboxfroggy.com/#pl"
+                        >Flexbox Froggy</a
+                      >
                     </li>
                   </ol>
                 </li>
@@ -449,22 +455,16 @@
               <p class="article__description">W szóstym tygodniu poznajemy:</p>
 
               <ol class="order__list">
-                <li class="order-list__item">
-                  HTML: formularze
-                </li>
-                <li class="order-list__item">
-                  Czym się różni GET od POST?
-                </li>
-                <li class="order-list__item">
-                  CSS: grid, media queries
-                </li>
+                <li class="order-list__item">HTML: formularze</li>
+                <li class="order-list__item">Czym się różni GET od POST?</li>
+                <li class="order-list__item">CSS: grid, media queries</li>
                 <li class="order-list__item">
                   JavaScript: eventy i event loop
                 </li>
+                <li class="order-list__item">Hamburger 🍔 menu</li>
                 <li class="order-list__item">
-                  Hamburger 🍔 menu
+                  GitHub pages: statyczny hosting
                 </li>
-                <li class="order-list__item">GitHub pages: statyczny hosting</li>
                 <li class="order-list__item">
                   Prace domowe
                   <ol class="order-list">
@@ -491,7 +491,7 @@
               </ol>
             </article>
           </section>
-        </section>
+        </div>
         <!-- Menu boczne-->
         <section class="aside">
           <h3 class="aside__header">Spis treści</h3>
@@ -512,7 +512,7 @@
             <a href="#top" class="aside__link">Do góry strony</a>
           </nav>
         </section>
-      </div>
+      </section>
     </main>
     <!-- Stopka -->
     <footer class="footer">

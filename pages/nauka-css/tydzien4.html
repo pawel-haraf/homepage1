@@ -33,11 +33,11 @@
         <h1 class="main__header">Moje postępy w nauce CSS'a</h1>
       </header>
       <!-- Sekcja z notatkami-->
-      <div class="notes">
+      <section class="notes">
+        <h2 class="notes__header">Notatki WTF: CSS</h2>
+        <img class="notes__image" src="../../img/css.png" alt="logo CSS" />
         <!-- Notatki z tygodnia -->
-        <section class="diary">
-          <h2 class="notes__header">Notatki WTF: CSS</h2>
-          <img class="notes__image" src="../../img/css.png" alt="logo CSS" />
+        <div class="diary">
           <!-- Zawartość Sekcji -->
           <section class="week">
             <h3 class="week__header">Tydzień IV 04.05.-10.05.2020 r.</h3>
@@ -319,15 +319,14 @@
                       przeglądarka z prawej i lewej strony dobierze taki sam
                       margines, czyli element się wyśrodkuje (będzie to działać
                       dla elementów blokowych). Żeby ta własność zadziałała,
-                      element musi mieć zdefiniowaną szerokość. w innym przypadku
-                      cały czas będzie domyślnie szeroki na całe okno, czyli nie
-                      będzie miał się z czego środkować. Nie jest to prawidłowy
-                      sposób wyśrodkowywania elementów.
+                      element musi mieć zdefiniowaną szerokość. w innym
+                      przypadku cały czas będzie domyślnie szeroki na całe okno,
+                      czyli nie będzie miał się z czego środkować. Nie jest to
+                      prawidłowy sposób wyśrodkowywania elementów.
                     </li>
                   </ul>
                 </dd>
               </dl>
-
             </article>
 
             <article class="article" id="4">
@@ -486,7 +485,7 @@
               </p>
             </article>
           </section>
-        </section>
+        </div>
         <!-- Menu boczne-->
         <section class="aside">
           <h3 class="aside__header">Spis treści</h3>
@@ -503,7 +502,7 @@
             <a href="#6" class="aside__link"> Życie w pudełku: float </a>
           </nav>
         </section>
-      </div>
+      </section>
     </main>
     <!-- Stopka -->
     <footer class="footer">

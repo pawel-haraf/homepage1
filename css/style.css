@@ -40,7 +40,7 @@ html {
 
 /* artykuł */
 .article {
-  width: 55vw;
+  width: 80vw;
   background: #e2e2e2;
   margin: 10px auto;
   border-radius: 8px;
@@ -77,11 +77,12 @@ html {
   top: 90px;
   margin: 10px;
   height: 70vh;
+  max-width: 200px;
   width: 25vw;
   background-color: #f8f9fa;
   border: 1px solid #06021d;
   border-radius: 8px;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   color: #212529;
@@ -264,17 +265,11 @@ body {
   width: 90vw;
   margin: 10px auto;
   border-radius: 8px;
-  display: grid;
-  column-gap: 16px;
-  grid-template-areas:
-    "header header"
-    "diary aside";
 }
 
 .notes__header {
   color: #ced4da;
   margin: 10px auto;
-  grid-area: header;
   text-align: center;
   justify-self: center;
 }
@@ -282,7 +277,6 @@ body {
 .notes__image {
   display: block;
   margin: 45px auto 0;
-  grid-area: header;
 }
 
 /* Selektor */
@@ -299,11 +293,11 @@ body {
 
 /* Tygodnie nauki*/
 .week {
-  width: 60vw;
+  width: 85vw;
   background: #f8f9fa;
   border: 1px #06021d solid;
   border-radius: 8px;
-  margin: 10px 10px;
+  margin: 10px 0 10px 10px;
 }
 
 .week__description {
@@ -321,6 +315,29 @@ body {
 /* Media queries */
 
 @media (min-width: 768px) {
+  .article {
+    width: 55vw;
+    background: #e2e2e2;
+    margin: 10px auto;
+    border-radius: 8px;
+  }
+
+  .aside {
+    position: sticky;
+    top: 90px;
+    margin: 10px;
+    height: 70vh;
+    width: 25vw;
+    background-color: #f8f9fa;
+    border: 1px solid #06021d;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #212529;
+    grid-area: aside;
+  }
+
   .hamburger {
     display: none;
   }
@@ -344,5 +361,38 @@ body {
   .navigation__link--homepage {
     background: #e9ecef;
     color: #343a40;
+  }
+
+  .notes {
+    background: #6c757d;
+    width: 90vw;
+    margin: 10px auto;
+    border-radius: 8px;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "diary aside";
+  }
+
+  .notes__header {
+    color: #ced4da;
+    margin: 10px auto;
+    grid-area: header;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .notes__image {
+    display: block;
+    margin: 45px auto 0;
+    grid-area: header;
+  }
+
+  .week {
+    width: 60vw;
+    background: #f8f9fa;
+    border: 1px #06021d solid;
+    border-radius: 8px;
+    margin: 10px 0 10px 10px;
   }
 }

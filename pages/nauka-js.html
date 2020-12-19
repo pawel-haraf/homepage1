@@ -10,7 +10,7 @@
   <body>
     <!-- Nawigacja strony -->
     <header class="header">
-      <nav class="navigation">
+      <nav class="navigation navigation--js">
         <a
           href="../index.html"
           class="navigation__link navigation__link--homepage"
@@ -23,6 +23,9 @@
           >Nauka - Narzędzia</a
         >
       </nav>
+      <button class="hamburger hamburger--js" aria-label="Otwórz menu">
+        🍔
+      </button>
     </header>
     <!-- Część główna strony -->
     <main class="main">
@@ -30,15 +33,11 @@
         <h1>Moje postępy w nauce JavaScript'a</h1>
       </header>
       <!-- Sekcja z notatkami-->
-      <div class="notes">
-          <h2 class="notes__header">Notatki WTF: JavaScript</h2>
-          <img
-            class="notes__image"
-            src="../img/js.png"
-            alt="Logo JavaScript'u"
-          />
+      <section class="notes">
+        <h2 class="notes__header">Notatki WTF: JavaScript</h2>
+        <img class="notes__image" src="../img/js.png" alt="Logo JavaScript'u" />
         <!-- Notatki z tygodnia -->
-        <section class="diary">
+        <div class="diary">
           <!-- Zawartość Sekcji -->
           <section class="week" id="week3">
             <h3 class="week__header">Tydzień III 27.04.-03.05.2020 r.</h3>
@@ -117,9 +116,9 @@
               </a>
             </article>
           </section>
-        </section>
+        </div>
         <!-- Menu boczne-->
-        <section class="aside">
+        <aside class="aside">
           <h3 class="aside__header">Spis treści</h3>
           <nav class="aside__navigation">
             <a href="#week3" class="aside__link">Tydzień III</a>
@@ -135,8 +134,8 @@
             <a href="#week13" class="aside__link">Tydzień XIII</a>
             <a href="#top" class="aside__link">Do góry strony</a>
           </nav>
-        </section>
-      </div>
+        </aside>
+      </section>
     </main>
     <!-- Stopka -->
     <footer class="footer">
@@ -145,5 +144,7 @@
       </p>
       <a href="#top" class="footer__link">Do góry strony.</a>
     </footer>
+    <!-- Skrypt JavaScript -->
+    <script src="../js/hamburger.js"></script>
   </body>
 </html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Będzie mały bonus...</title>
+    <link href="../../css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- Nawigacja strony -->
+    <header class="header">
+      <nav class="navigation navigation--js">
+        <a
+          href="../../index.html"
+          class="navigation__link navigation__link--homepage"
+        >
+          Strona główna
+        </a>
+        <a href="../nauka-html.html" class="navigation__link">Nauka - HTML</a>
+        <a href="../nauka-css.html" class="navigation__link">Nauka - CSS</a>
+        <a href="../nauka-js.html" class="navigation__link">
+          Nauka - JavaScript
+        </a>
+        <a href="../nauka-narzedzia.html" class="navigation__link">
+          Nauka - Narzędzia
+        </a>
+      </nav>
+      <button class="hamburger hamburger--js" aria-label="Otwórz menu">
+        🍔
+      </button>
+    </header>
+    <!-- Część główna strony -->
+    <main>
+      <header id="top">
+        <h1 class="main__header">Moje postępy w nauce HTML'a</h1>
+      </header>
+      <!-- Sekcja z notatkami-->
+      <section class="notes">
+        <h2 class="notes__header">Notatki WTF: HTML</h2>
+        <img class="notes__image" src="../../img/html5.png" alt="logo HTLM 5" />
+        <!-- Notatki z tygodnia -->
+        <div class="diary">
+          <!-- Zawartość Sekcji -->
+          <section class="week">
+            <h3 class="week__header">Tydzień II 20.04. - 26.04.2020 r.</h3>
+
+            <!-- Artykuły -->
+            <article class="article">
+              <h4 class="article__header" id="1">
+                Podstawowe informacje o HTLM'u
+              </h4>
+
+              <p class="article__description">
+                HTML (czyli HyperText Markup Language) odpowiada za treść, a
+                właściwie za jej opakowanie. Informuje przeglądarkę gdzie w
+                tekście znajduą się nagłówki, odnośniki, obrazki formularze itp.
+              </p>
+
+              <p class="article__description">
+                Jako treść w dokumencie HTML uznajemy:
+              </p>
+
+              <ul class="list">
+                <li class="list__item">Teksty</li>
+
+                <li class="list__item">Nagłówki</li>
+
+                <li class="list__item">Linki</li>
+
+                <li class="list__item">Listy</li>
+
+                <li class="list__item">Definicje</li>
+
+                <li class="list__item">Obrazki</li>
+
+                <li class="list__item">Video</li>
+
+                <li class="list__item">Formularze</li>
+
+                <li class="list__item">
+                  Wszystko co jest nośnikiem informacji
+                </li>
+              </ul>
+            </article>
+
+            <article class="article">
+              <h4 class="article__header" id="2">Budowa dokumentu HTML</h4>
+
+              <p class="article__description">
+                Plik HTML składa się ze ze znaczników (tagów/elementów). Każdy
+                ze znaczników (na co ich nazwa wskazuje) nadaje znaczenie
+                poszczególnym fragmentom tekstu. Dlatego mówimy, że dokument
+                HTML powinien być
+                <strong class="strong">semantyczny</strong> (mający
+                znaczenie).<br />
+                Budowa znaczników wygląda następująco:
+              </p>
+
+              <code class="code"
+                >&lt;znacznik atrybut=”wartość”&gt;treść&lt;/znacznik&gt;</code
+              >
+
+              <p class="article__description">
+                Pliki zawierające kod HTML mają zwykle rozszerzenie .html. Plik
+                ten to szkielet strony internetowej, nawet ma taką budowę (co
+                pokazuje obrazek niżej)
+              </p>
+
+              <img
+                src="/img/szkielet.png"
+                class="article__image"
+                alt="szkielet strony internetowej"
+              />
+
+              <p class="article__description">
+                Żeby zacząć w VSC po utworzeniu pliku index.html wpisujemy "!" i
+                następnie wciskamy klawisz tab. Utworzy to na początkowy
+                szkielet strony.
+              </p>
+            </article>
+
+            <article class="article">
+              <h4 class="article__header" id="3">Znaczniki</h4>
+
+              <p class="article__description">
+                W tym tygodniu poznaliśmy następujące znaczniki:
+              </p>
+
+              <ul class="list">
+                <li class="list__item">
+                  <code class="code">&lt;main&gt;</code> - główna część
+                  dokumentu
+                </li>
+
+                <li class="list__item">
+                  <code class="code">&lt;section&gt;</code> - sekcje dokumentu
+                </li>
+
+                <li class="list__item">
+                  <code class="code">&lt;article&gt;</code> - samodzielne treści
+                </li>
+
+                <li class="list__item">
+                  <code class="code">&lt;header&gt;</code> - Nagłówek -
+                  dokumentu / sekcji / artykułu
+                </li>
+
+                <li class="list__item">
+                  <code class="code">&lt;footer&gt;</code> - Stopka - dokumentu
+                  / sekcji
+                </li>
+
+                <li class="list__item">
+                  <code class="code">&lt;h1-h6&gt;</code> - Tekstowe nagłówki
+                  tytułowe - dokumentu / sekcji
+                </li>
+
+                <li class="list__item">
+                  <code class="code">&lt;p&gt;</code> - Paragraf / akapit
+                </li>
+              </ul>
+            </article>
+
+            <article class="article">
+              <h4 class="article__header" id="4">
+                Jak sprawdzić czy mój HTML jest OK?
+              </h4>
+
+              <p class="article__description">
+                Możemy to sprawdzić na stronie:
+                <a
+                  href="https://validator.w3.org/nu/#textarea"
+                  class="article__link"
+                  >Validator HTML</a
+                >
+              </p>
+            </article>
+
+            <article class="article">
+              <h4 class="article__header" id="5">Podsumowanie</h4>
+
+              <ul class="list">
+                <li class="list__item">Opakowuje i opisuje treść strony</li>
+
+                <li class="list__item">
+                  Mówi przeglądarce o strukturze dokumentu (i o tym co ma
+                  wczytać)
+                </li>
+
+                <li class="list__item">Posiada swoją zdefiniowaną składnie</li>
+
+                <li class="list__item">
+                  Nie jest językiem programowania, jest językiem znaczników
+                  (Markup Language)
+                </li>
+
+                <li class="list__item">
+                  Aktualną rekomendowaną wersją jest 5.2
+                </li>
+
+                <li class="list__item">
+                  Całą specyfikację znajdziesz na stronie w3c:
+                  <a href="https://www.w3.org/TR/html52/" class="aside__link"
+                    >https://www.w3.org/TR/html52/</a
+                  >
+                </li>
+              </ul>
+            </article>
+          </section>
+        </div>
+        <!-- Menu boczne-->
+        <section class="aside">
+          <h4 class="aside__header">W tym tygodniu poznajemy:</h4>
+
+          <a href="#1" class="aside__link">Podstawowe informacje o HTLM'u</a>
+
+          <a href="#2" class="aside__link">Budowa dokumentu HTML</a>
+
+          <a href="#3" class="aside__link">Znaczniki</a>
+
+          <a href="#4" class="aside__link"
+            >Jak sprawdzić czy mój HTML jest OK?</a
+          >
+
+          <a href="#5" class="aside__link">Podsumowanie</a>
+        </section>
+      </section>
+    </main>
+    <!-- Stopka -->
+    <footer class="footer">
+      <p class="footer__description">
+        Mój pierwszy internetowy dziennik. Anno domini 2020 r.
+      </p>
+      <a href="#top" class="footer__link">Do góry strony.</a>
+    </footer>
+    <!-- Skrypt JavaScript -->
+    <script src="../../js/hamburger.js"></script>
+  </body>
+</html>

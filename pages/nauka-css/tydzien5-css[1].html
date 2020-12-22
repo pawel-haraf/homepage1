@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Będzie mały bonus...</title>
+    <link href="../../css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  <body>
+    <!-- Nawigacja strony -->
+    <header class="header">
+      <nav class="navigation navigation--js">
+        <a
+          href="../../index.html"
+          class="navigation__link navigation__link--homepage"
+        >
+          Strona główna
+        </a>
+        <a href="../nauka-html.html" class="navigation__link">Nauka - HTML</a>
+        <a href="../nauka-css.html" class="navigation__link">Nauka - CSS</a>
+        <a href="../nauka-js.html" class="navigation__link">
+          Nauka - JavaScript
+        </a>
+        <a href="../nauka-narzedzia.html" class="navigation__link">
+          Nauka - Narzędzia
+        </a>
+      </nav>
+      <button class="hamburger hamburger--js" aria-label="Otwórz menu">
+        🍔
+      </button>
+    </header>
+    <!-- Część główna strony -->
+    <main>
+      <header id="top">
+        <h1 class="main__header">Moje postępy w nauce CSS'a</h1>
+      </header>
+      <!-- Sekcja z notatkami-->
+      <section class="notes">
+        <h2 class="notes__header">Notatki WTF: CSS</h2>
+        <img class="notes__image" src="../../img/css.png" alt="logo CSS" />
+        <!-- Notatki z tygodnia -->
+        <div class="diary">
+          <!-- Zawartość Sekcji -->
+          <section class="week">
+            <h3 class="week__header">Tydzień V 11.05.-17.05.2020 r.</h3>
+            <!-- Artykuły -->
+            <article class="article" id="1">
+              <h4 class="article__header">
+                WTF: Klan czyli DOM jako rodzina elementów i dziedziczenie
+                własności CSS
+              </h4>
+              <p class="article__description">
+                DOM ma strukturę podobną do drzewa genealogicznego. Czyli jest
+                główny rodzic <code class="code">&lt;html&gt;</code>, posiada
+                swoje dzieci <code class="code">&lt;head&gt;</code> i
+                <code class="code">&lt;body&gt;</code>. One z kolei posiadają
+                swoje dzieci, które mają swoje. Tworzy się z tego spora familia.
+                😛
+              </p>
+              <h5 class="article__header">Dziedziczenie</h5>
+              <p class="article__description">
+                Wszystkie dzieci dostają atrybuty swojego rodzica, pod
+                warunkiem, że nie mają już zdefiniowanych tych atrybutów.
+              </p>
+              <p class="article__description">
+                Jeśli rodzice i dzieci nie mają zdefiniowanych żadnych
+                atrybutów, to przeglądarka wykorzystuje te style, które ma
+                domyślnie zdefiniowane.
+              </p>
+              <h5 class="article__description">
+                <code class="code">własność: inherit</code>
+              </h5>
+              <p class="article__description">
+                Określa, że dana własność ma być dziedziczona z rodzica. Oznacza
+                że jeśli dla koloru linków przypiszemy inherit to kolor takiego
+                złącza będzie taki jak rodzica (np. nagłówka lub paragrafu)
+              </p>
+            </article>
+            <article class="article" id="2">
+              <h4 class="article__header">Normalizacja vs reset</h4>
+              <h5 class="article__header">Reset</h5>
+              <p class="article__description">
+                Polega na wyłączeniu wszystkich domyślnych stylów przeglądarki.
+                Jest to technika, polegająca zapewnieniu sobie pracy na czystej
+                kartce. Przez to bez określenia swoich własności CSS, strona
+                traci na przejrzystości. Ciężko odróżnić elementy od siebie.
+                "Typowy" reset to:
+              </p>
+              <code class="code">
+                * {<br />
+                margin:0;<br />
+                padding: 0;<br />
+                outline: none; /* Ta własność w dużym stopniu ogranicza
+                dostępność dokumentu. Tracimy możliwość orientowania się co jest
+                co w dokumencie. przy naciskaniu klawiasza TAB nie jest
+                oznaczane miejsce, gdzie się aktualnie znajdujemy */<br />
+                } <br />
+                <br />
+                ul, ol {<br />
+                list-style: none;<br />
+                }
+              </code>
+              <h5 class="article__header">Normalizacja</h5>
+              <p class="article__description">
+                Normalizacja ma na celu ujednolicenie wyglądu stylów domyślnych
+                w różnych przeglądarkach (różni producenci różnie je
+                zdefiniowali w swoich produktach). W tym powstał projekt który
+                rozwiązuje te problemy i sprawia, że nawet te rzeczy, których
+                nie ostylujemy będą wyglądać podobnie w różnych przeglądarkach.
+                W tym celu powstał specjalny plik CSS'owy
+                <a
+                  href="https://necolas.github.io/normalize.css/"
+                  class="article__link"
+                  >normalize.css</a
+                >
+                który możemy dodać do dokumentu html.
+              </p>
+              <h5 class="article__description">Miksujemy!</h5>
+              <p class="article__description">
+                Żeby nie było za łatwo, to możemy połączyć reset z
+                normalizacją😛
+              </p>
+              <p class="article__description">
+                Czyli stosujemy własności CSS z pliku normalize.css oraz
+                dodatkowo do pliku, ze swoimi stylami dopisujemy:
+              </p>
+              <code class="code">
+                html {<br />
+                box-sizing: border-box;<br />
+                }<br />
+                <br />
+                *, *:before, *:after {<br />
+                box-sizing: inherit;<br />
+                }
+              </code>
+            </article>
+            <article class="article" id="3">
+              <h4 class="article__header">Flexbox -Wyśrodkujmy coś</h4>
+              <code class="code"> display: flex </code>
+              <p class="article__description">
+                Flex jest to własność, która zamienia nam domyślny display:
+                block na nowy system pozycjonowania i rozmieszczania elementów.
+                Flex pracuje w dwóch osiach: osi poziomej i pionowej.
+              </p>
+              <ul class="list">
+                <li class="list__item">
+                  <code class="code">flex-direction</code> - określa kierunek w
+                  jakim będą ustawiane kolejne elementy. Jego wartości to:
+                  <ul class="list">
+                    <li class="list__item">
+                      <code class="code">row</code> (ustawia elementy obok
+                      siebie)
+                    </li>
+                    <li class="list__item">
+                      <code class="code">column</code> (ustawia elementy pod
+                      sobą)
+                    </li>
+                    <li class="list__item">
+                      <code class="code">row-reverse</code> (ustawia elementy
+                      obok siebie - od prawej do lewej)
+                    </li>
+                    <li class="list__item">
+                      <code class="code">column-reverse</code> (ustawia elementy
+                      pod sobą - od dołu do góry)
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">flex-wrap</code> - zawijanie
+                  wiersza/kolumny:
+                  <ul class="list">
+                    <li class="list__item">
+                      <code class="code">nowrap</code> - nie zawijaj (stara się
+                      zmieścić wszystko w jednej linii/kolumnie)
+                    </li>
+                    <li class="list__item">
+                      <code class="code">wrap</code> - zawija wiersze/kolumny (
+                      jeśli element osiągnie swoją wielkość i reszta elementów
+                      się nie mieści zostaną przerzucone do następnej
+                      linii/kolumny)
+                    </li>
+                    <li class="list__item">
+                      <code class="code">wrap-reverse</code>- zawija wiersze
+                      kolumny, umieszczając pierwszy box w prawym dolnym rogu
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">flex-flow</code>
+                  skrócona wartość, która umożliwia nam podanie własności
+                  flex-direction i flex-wrap w jednym miejscu, np.:
+                </li>
+                <li class="list__item">
+                  <code class="code">flex-flow: row nowrap;</code>
+                </li>
+                <li class="list__item">
+                  <code class="code">justify-content</code> - ustawianie
+                  elementów wzdłuż osi flex-direction
+                  <ul class="list">
+                    <li class="list__item">
+                      <code class="code">flex-start</code> domyślna wartość -
+                      przykleja elementy do lewej/górnej krawędzi
+                    </li>
+                    <li class="list__item">
+                      <code class="code">flex-end</code> przykleja elementy do
+                      prawej/dolnej krawędzi
+                    </li>
+                    <li class="list__item">
+                      <code class="code">center</code> ustawia elementy na
+                      środku
+                    </li>
+                    <li class="list__item">
+                      <code class="code">space-between</code> rozstawia elementy
+                      na całą szerokość ekranu (przyklejając elementy do prawej
+                      i lewej krawędzi), a między poszczególnymi elementami
+                      zostawia równy dystans (margines)
+                    </li>
+                    <li class="list__item">
+                      <code class="code">space-around</code> rozstawia elementy
+                      na całą szerokość ekranu, ustawia równe wolne przestrzenie
+                      (marginesy) pomiędzy elementami oraz od krawędzi
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">justify-content</code> - ustawianie
+                  elementów wzdłuż osi flex-direction
+                  <ul class="list">
+                    <li class="list__item">
+                      <code class="code">stretch</code> domyślna wartość-
+                      rozciąga elementy
+                    </li>
+                    <li class="list__item">
+                      <code class="code">flex-start</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">flex-end</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">center</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">space-between</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">space-around</code>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">align-content</code> ustawianie
+                  wierszy/kolumn wzdłuż osi przeciwnej do flex-direction (taki
+                  justify-content dla drugiej osi)
+                  <ul class="list">
+                    <li class="list__item">
+                      <code class="code">stretch</code> domyślna wartość-
+                      rozciąga elementy
+                    </li>
+                    <li class="list__item">
+                      <code class="code">flex-start</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">flex-end</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">center</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">space-between</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">space-around</code>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">align-items</code> ustawianie elementów
+                  wzdłuż osi przeciwnej do flex-direction w obrębie pojedynczego
+                  wiersza/kolumny (jeśli są różnej wielkości elementy w jednej
+                  linii, to wyrównuje określony sposób)
+                  <ul class="list">
+                    <li class="list__item">
+                      <code class="code">stretch</code> domyślna wartość-
+                      rozciąga elementy
+                    </li>
+                    <li class="list__item">
+                      <code class="code">flex-start</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">flex-end</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">center</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">space-between</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">space-around</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">baseline</code>
+                      ustawia element względem dolnej krawędzi pierwszego
+                      wiersza
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">align-self</code> ustawianie elementu
+                  wzdłuż osi przeciwnej do flex-direction. Pozycjonujemy
+                  pojedyńczy element.
+                  <ul class="list">
+                    <li class="list__item">
+                      <code class="code">stretch</code> domyślna wartość-
+                      rozciąga elementy
+                    </li>
+                    <li class="list__item">
+                      <code class="code">flex-start</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">flex-end</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">center</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">space-between</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">space-around</code>
+                    </li>
+                    <li class="list__item">
+                      <code class="code">baseline</code>
+                      ustawia element względem dolnej krawędzi pierwszego
+                      wiersza
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">order</code> kolejność, ta własność
+                  umożliwia ustalenie kolejności rozmieszczenia elementów,
+                  niezależnie od tej domyślnej. Elementy o niższych wartościach
+                  przyporządkowanej liczby będą wyświetlane jako pierwsze i
+                  kolejno z coraz wyższymi indexami.
+                  <ul class="list">
+                    <li class="list__item">liczba całkowita (domyślnie 0)</li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">flex-grow</code> współczynnik odpowiadający
+                  za to jak bardzo nasz element powinien rosnąć jeśli w wierszu,
+                  kolumnie zostaje jakieś wolne miejsce.
+                  <ul class="list">
+                    <li class="list__item">liczba całkowita (domyślnie 0)</li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">flex-shrink</code> własność sprawia że dany
+                  element kurczy się tylko do osiągnięcia wielkości minimalne i
+                  później już się nie zmienia
+                </li>
+                <li class="list__item">
+                  <code class="list__item">flex-basis</code> rozmiar bazowy -
+                  jeśli element nie ma określonej wielkości przyjmie on rozmiar
+                  bazowy
+                </li>
+                <li class="list__item">
+                  <code class="code"
+                    >flex: &lt;flex-grow&gt; &lt;flex-shrink&gt;
+                    &lt;flex-basis&gt;&lt;/flex-basis&gt;</code
+                  >
+                  skrót umożliwiający nam zapisanie kilku własności w jednej
+                  linijce
+                  <ul class="list">
+                    <li class="list__item">liczba całkowita (domyślnie 1)</li>
+                  </ul>
+                </li>
+              </ul>
+              <p class="article__description">
+                Żeby poćwiczyć sobie własności i sposób działania flex'a poniżej
+                znajduje się link do strony, w której w devtools'ach można
+                pozmieniać własności. Wtedy pokazany zostanie sposób działania
+                flexbox'a
+              </p>
+              <a
+                href="playground.html"
+                class="article__link article__link--special"
+                >Plac zabaw z flex'em</a
+              >
+            </article>
+            <article class="article" id="4">
+              <h4 class="article__header">CSS: Tła</h4>
+              <code class="code"> display: flex </code>
+              <p class="article__description">
+                Własności w CSS'ie związane z tłami zaczynają się od background
+                , funkcjonuje to jako osobna własność ( skrócona ), która
+                zawiera w sobie bardziej rozwinięte własności związanych z
+                tłami. Składa się ona z:
+              </p>
+              <ul class="list">
+                <li class="list__item">
+                  <code class="code"
+                    >background-image: url('sciezka-do-pliku')
+                  </code>
+                  - wstawia obrazek jako tło
+                </li>
+                <li class="list__item">
+                  <code class="code">background-position:</code> ustawia nam tło
+                  względem elementu, które to tło dostaje
+                  <ul class="list">
+                    <li class="list__item">
+                      0 0 (domyślna wartość górny lewy róg)
+                    </li>
+                    <li class="list__item">top right</li>
+                    <li class="list__item">bottom left</li>
+                    <li class="list__item">center center</li>
+                    <li class="list__item">xx% xx%</li>
+                    <li class="list__item">xxpx xxpx</li>
+                    <li class="list__item">… …</li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-repeat:</code>powtarzanie tła
+                  <ul class="list">
+                    <li class="list__item">repeat (domyśłna wartość)</li>
+                    <li class="list__item">
+                      repeat-x - powtarzane tylko w osi x
+                    </li>
+                    <li class="list__item">
+                      repeat-y - powtarzane tylko w osi y
+                    </li>
+                    <li class="list__item">no-repeat - nie powtarzane</li>
+                    <li class="list__item">round - otacza nasz element</li>
+                    <li class="list__item">
+                      space - nie przycina obrazka, tylko rozmieszcza go
+                      równomiernie elemencie
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-attachment:</code>
+                  sposób zachowania się tła w momencie przesuwania treści
+                  <ul class="list">
+                    <li class="list__item">
+                      scroll - przesuwa tło razem ze stroną (treścią)
+                    </li>
+                    <li class="list__item">
+                      fixed - tło nie rusza się, jest nieruchome
+                    </li>
+                    <li class="list__item">
+                      local - tło przesuwa się razem z treścią elementu (jeśli
+                      dla elementu nadana jest wysokość oraz overflow: scroll )
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-origin:</code>
+                  definiuje nam w którym miejscu nasze tło powinno się zaczynać
+                  <ul class="list">
+                    <li class="list__item">content-box</li>
+                    <li class="list__item">padding-box</li>
+                    <li class="list__item">border-box</li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-clip:</code>
+                  pokazuje w którym miejscu tło powinno być cięte
+                  <ul class="list">
+                    <li class="list__item">padding-box</li>
+                    <li class="list__item">border-box</li>
+                    <li class="list__item">content-box</li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-color:</code>
+                  wartość koloru;
+                  <ul class="list">
+                    <li class="list__item">
+                      rgba(255,255,255,0.4) tło może być pół przezroczyste,
+                      czwarta wartość określa stopień przezroczystości
+                    </li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  <code class="code">background-size:</code>
+                  określa jakie duże ma być nasze tło
+                  <ul class="list">
+                    <li class="list__item">auto</li>
+                    <li class="list__item">
+                      cover - obrazek będzie wypełniać całe okno nie zależnie od
+                      rozmiaru okna
+                    </li>
+                    <li class="list__item">
+                      contain - będzie starał się wypełnić ekran w miarę jak
+                      będziemy zmniejszać/zwiększać wielkość okna i starając się
+                      umieścić całe zdjęcie
+                    </li>
+                    <li class="list__item">&lt;width&gt; &lt;height&gt;</li>
+                  </ul>
+                </li>
+                <li class="list__item">
+                  gradienty - fajną stroną do robienia gradientów jest:<br />
+                  <a
+                    href="https://cssgradient.io/gradient-backgrounds/"
+                    class="list__link" target="_blank"
+                  >
+                    gradient-backgrounds
+                  </a>
+                </li>
+                <li class="list__item">
+                  <code class="code">background:</code>
+                  <ul class="list">
+                    <li class="list__item">
+                      url(sweettexture.jpg) /* image */
+                    </li>
+                    <li class="list__item">
+                      top center / 200px 200px /* position / size */
+                    </li>
+                    <li class="list__item">no-repeat /* repeat */</li>
+                    <li class="list__item">fixed /* attachment */</li>
+                    <li class="list__item">padding-box /* origin */</li>
+                    <li class="list__item">content-box /* clip */</li>
+                    <li class="list__item">red ; /* color */</li>
+                  </ul>
+                </li>
+              </ul>
+            </article>
+          </section>
+        </div>
+        <!-- Menu boczne-->
+        <section class="aside">
+          <h3 class="aside__header">Spis treści</h3>
+          <nav class="aside__navigation">
+            <a href="#1" class="aside__link">
+              WTF: Klan czyli DOM jako rodzina elementów i dziedziczenie
+              własności CSS
+            </a>
+            <a href="#2" class="aside__link"> Normalizacja vs reset </a>
+            <a href="#3" class="aside__link"> Flexbox </a>
+            <a href="#4" class="aside__link"> Css: Tła </a>
+          </nav>
+        </section>
+      </section>
+    </main>
+    <!-- Stopka -->
+    <footer class="footer">
+      <p class="footer__description">
+        Mój pierwszy internetowy dziennik. Anno domini 2020 r.
+      </p>
+      <a href="#top" class="footer__link">Do góry strony.</a>
+    </footer>
+    <!-- Skrypt JavaScript -->
+    <script src="../../js/hamburger.js"></script>
+  </body>
+</html>

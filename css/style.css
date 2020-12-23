@@ -250,6 +250,10 @@ body {
   margin: 0 0 16px 0;
 }
 
+.navigation__link:hover {
+  color: yellow;
+}
+
 .navigation--open {
   display: block;
 }
@@ -310,6 +314,24 @@ body {
   color: #212529;
   margin: 10px auto;
   text-align: center;
+}
+
+.week__header::before {
+  content: "😎";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.week__header::after {
+  content: "😎";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
 }
 
 /* Media queries */

@@ -1,3 +1,7 @@
+({
+  plugins: ['jsdom-quokka-plugin'],
+  jsdom: {html: `<div id="test">Hello</div>`}
+})
 //Deklarujemy zmienne
 const name = "Paweł";
 const age = 32;
@@ -15,7 +19,7 @@ const heading = document.querySelector(".main__header--js");
 
 console.log(heading);
 
-console.log(heading.innerHTML);
+// console.log(heading.innerHTML);
 
 // Podmieniamy zawartość .main__header--js na inny tekst
 heading.innerHTML = "Witaj świecie pisze do Ciebie za pośrednictwem javaScript";

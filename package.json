@@ -1,0 +1,22 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "personal diary about Frontend learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawel-haraf/homepage1.git"
+  },
+  "author": "Paweł Hara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pawel-haraf/homepage1/issues"
+  },
+  "homepage": "https://github.com/pawel-haraf/homepage1#readme",
+  "dependencies": {
+    "jsdom-quokka-plugin": "^1.0.16"
+  }
+}

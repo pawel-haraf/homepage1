@@ -289,9 +289,9 @@
               </p>
               <h5 class="article__header">Sprawdźmy jak działa SASS</h5>
               <p class="article__description">
-                <a class="article__link" href="https://www.sassmeister.com/"
-                  >https://www.sassmeister.com/</a
-                >
+                <a class="article__link" href="https://www.sassmeister.com/">
+                  https://www.sassmeister.com/
+                </a>
                 na tej stronie będziemy pisać pierwszy swój kod scss 😛 Od razu
                 będziemy mieli widok jak to będzie wyglądało w kodzie css po
                 użyciu Sass
@@ -456,6 +456,41 @@
                 .css
               </p>
             </article>
+            <article class="article" id="6">
+              <h4 class="article__header">node-sass</h4>
+              <p class="article__description">
+                Instalujemy paczkę node-sass , która pozwoli nam z skorzystać z
+                SCSS w naszym projekcie homepage.
+              </p>
+              <code class="code"> npm install node-sass </code>
+              <p class="article__description">
+                Żeby node-sass podmienił utworzony plik scss na plik css
+                wpisujemy polecenie:
+              </p>
+              <code class="code">
+                npx node-sass scss/main.scss css/main.css
+              </code>
+              <p class="article__description">
+                Istnieje również funkcja śledzenia zmian w pliku scss i
+                automatycznie nadpisywanie pliku css. jest to możliwe poprzez
+                dodanie flagi -w (watch) do kodu node-sass.
+              </p>
+              <code class="code">
+                npx node-sass -w scss/main.scss css/main.css
+              </code>
+              <h5 class="article__header">Skrypt node-sass</h5>
+              <p class="article__description">
+                Dodajemy skrypt do package.json, żeby ułatwić sobie i
+                przyspieszyć pracę.
+              </p>
+              <code class="code">
+                "sass": "npx node-sass -w scss/main.scss css/main.css",
+              </code>
+              <p class="article__description">
+                Żeby wykonać skrypt w terminalu wpisujemy:
+              </p>
+              <code class="code"> npm run sass </code>
+            </article>
           </section>
         </div>
         <!-- Menu boczne-->
@@ -467,6 +502,7 @@
             <a href="#3" class="aside__link">NPM i NPX</a>
             <a href="#4" class="aside__link">NPM Scripts</a>
             <a href="#5" class="aside__link">SASS / SCSS</a>
+            <a href="#6" class="aside__link">node-sass</a>
           </nav>
         </section>
       </section>

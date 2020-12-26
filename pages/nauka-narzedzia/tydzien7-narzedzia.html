@@ -221,6 +221,27 @@
                 <li class="list__item">cowsay</li>
               </ul>
             </article>
+            <article class="article" id="4">
+              <h4 class="article__header">NPM Scripts</h4>
+              <p class="article__description">
+                NPM skrypty są te komendy, które możemy sobie zdefiniować w
+                pliku package.json, który jest w naszym projekcie. Żeby dodać
+                taki skrypt, to w sekcji scripts definiujemy nazwę skryptu i
+                polecenie, które ma wykonać.  Na początek tworzymy skrypt:
+              </p>
+              <code class="code"> "start": "node script.js", </code>
+              <p class="about__description">
+                Żeby odpalić skrypt w konsoli wpisujemy:
+              </p>
+              <code class="code"> npm start </code>
+              <p class="about__description">
+                Dla skryptów opalanych npx (np. dla cowsay 😛) skrypt zapisujemy
+                podobnie :
+              </p>
+              <code class="code"> "cow": "cowsay hello world!", </code>
+              <p class="about__description">ale odpalamy je poleceniem:</p>
+              <code class="code"> npm run cow </code>
+            </article>
           </section>
         </div>
         <!-- Menu boczne-->
@@ -230,6 +251,7 @@
             <a href="#1" class="aside__link">.gitignore</a>
             <a href="#2" class="aside__link">Node.js</a>
             <a href="#3" class="aside__link">NPM i NPX</a>
+            <a href="#4" class="aside__link">NPM Scripts</a>
           </nav>
         </section>
       </section>

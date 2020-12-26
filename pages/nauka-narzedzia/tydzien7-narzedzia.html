@@ -230,17 +230,231 @@
                 polecenie, które ma wykonać.  Na początek tworzymy skrypt:
               </p>
               <code class="code"> "start": "node script.js", </code>
-              <p class="about__description">
+              <p class="article__description">
                 Żeby odpalić skrypt w konsoli wpisujemy:
               </p>
               <code class="code"> npm start </code>
-              <p class="about__description">
+              <p class="article__description">
                 Dla skryptów opalanych npx (np. dla cowsay 😛) skrypt zapisujemy
                 podobnie :
               </p>
               <code class="code"> "cow": "cowsay hello world!", </code>
-              <p class="about__description">ale odpalamy je poleceniem:</p>
+              <p class="article__description">ale odpalamy je poleceniem:</p>
               <code class="code"> npm run cow </code>
+            </article>
+            <article class="article" id="5">
+              <h4 class="article__header">SASS / SCSS</h4>
+              <p class="article__description">Problemy z CSS</p>
+              <ul class="list">
+                <li class="list__item">
+                  porozrzucane klasy (bałagan w plikach)
+                </li>
+                <li class="list__item">
+                  @media oddzielone od elementu (konieczność ponownego
+                  definiowania)
+                </li>
+                <li class="list__item">
+                  kiepska czytelność plików (szczególnie przy zagnieżdżeniach)
+                </li>
+                <li class="list__item">
+                  brak możliwości definiowania funkcji do robienia podobnych
+                  rzeczy
+                </li>
+              </ul>
+              <p class="article__description">
+                Dużą ilość tych problemów rozwiązują preprocesory. Jednym z
+                popularniejszych preprocesorów jest SASS (
+                <a
+                  class="article__link"
+                  href="https://sass-lang.com/documentation"
+                >
+                  Sass documentation
+                </a>
+                )
+              </p>
+              <p class="article__description">
+                SASS potrzebuje narzędzia do działania. Na tym etapie nie
+                będziemy instalować tego narzędzia. Na początku skupimy się na
+                zasadach działania tego narzędzia i jak go używać.
+              </p>
+              <h5 class="article__header">SASS vs SCSS</h5>
+              <p class="article__description">
+                SASS jest narzędziem, ma on swoją składnię i dodatkowo ma
+                składnię SCSS.
+              </p>
+              <p class="article__description">
+                Działanie preprocesorów polega na tym, że na początku piszemy
+                style w pliku .scss, a następnie program SASS zamienia to na
+                plik .css który jest zrozumiały dla przeglądarki. \
+              </p>
+              <h5 class="article__header">Sprawdźmy jak działa SASS</h5>
+              <p class="article__description">
+                <a class="article__link" href="https://www.sassmeister.com/"
+                  >https://www.sassmeister.com/</a
+                >
+                na tej stronie będziemy pisać pierwszy swój kod scss 😛 Od razu
+                będziemy mieli widok jak to będzie wyglądało w kodzie css po
+                użyciu Sass
+              </p>
+              <p class="article__description">
+                Wszystko co zapisalibyśmy w css, zadziała również w Sass'ie
+              </p>
+              <h5 class="article__header">zmienne</h5>
+              <p class="article__description">
+                W SCSS'ie występują zmienne i żeby je zdefiniować używamy
+                znaczka $. Zmienne te nie będą się przepisywać do CSS, tylko
+                będą wykorzystywane w SCSS.
+              </p>
+              <code class="code"> $myFavouriteGrey: #ccc; </code>
+              <p class="article__description">
+                Wszędzie, gdzie dana zmienna będzie wykorzystana w kodzie, to
+                będzie automatycznie uzupełniana jej wartość w kodzie css. Np.
+              </p>
+              <code class="code"> color: $myFavouriteGrey; </code>
+              <h5 class="article__header">@mixin</h5>
+              <p class="article__description">
+                Jest to funkcja w której możemy zdefiniować kilka własności i
+                później móc je szybko zastosować w kodzie.
+              </p>
+              <code class="code">
+                @mixin borderBackground {<br />
+                border-radius: 10px;<br />
+                background: hotpink;<br />
+                }
+              </code>
+              <p class="article__description">
+                Żeby wywołać własności z @mixin'a przywołujemy go poprzez
+                <strong>include</strong>
+              </p>
+              <code class="code"> include borderBackground </code>
+              <p class="article__description">
+                Możemy również Mixin'em definiować parametry:
+              </p>
+              <code class="code">
+                @mixin borderBackgroundParameter($radius, $background) {<br />
+                border-radius: $radius;<br />
+                background: $background;<br />
+                }<br />
+                <br />
+                @include borderBackgroundParameter(20px, yellow)
+              </code>
+              <h5 class="article__header">@extend</h5>
+              <p class="article__description">
+                Pozwala na zaimportowanie stylów użytych przy innym selektorze.
+              </p>
+              <code class="code"> @extend .font-style; </code>
+              <p class="article__description">
+                Nasz plik scss'owy wygląda następująco:
+              </p>
+              <code class="code">
+                $myFavouriteGrey: #ccc;<br />
+                $tablet: 768px;<br />
+                $desktop: 1024px;<br />
+                <br />
+                @mixin borderBackground {<br />
+                border-radius: 10px;<br />
+                background: hotpink;<br />
+                }<br />
+                <br />
+                @mixin borderBackgroundParameter($radius, $background) {<br />
+                border-radius: $radius;<br />
+                background: $background;<br />
+                }<br />
+                <br />
+                .font-style {<br />
+                font-size: 13px;<br />
+                color: green;<br />
+                }<br />
+                <br />
+                .main {<br />
+                color: $myFavouriteGrey;<br />
+                @include borderBackground;<br />
+                @extend .font-style;<br />
+                }<br />
+                <br />
+                .main::before {<br />
+                fron-size: 20px;<br />
+                content: 'hi';<br />
+                }<br />
+                <br />
+                @media (min-width: $desktop) {<br />
+                .main {<br />
+                color: red;<br />
+                @include borderBackgroundParameter(20px, yellow);<br />
+                }<br />
+                }
+              </code>
+              <p class="article__description">
+                dla porównania plik css będzie wyglądał następująco
+              </p>
+              <code class="code">
+                .font-style, .main {<br />
+                font-size: 13px;<br />
+                color: green;<br />
+                }<br />
+                <br />
+                .main {<br />
+                color: #ccc;<br />
+                border-radius: 10px;<br />
+                background: hotpink;<br />
+                }<br />
+                <br />
+                .main::before {<br />
+                fron-size: 20px;<br />
+                content: "hi";<br />
+                }<br />
+                <br />
+                @media (min-width: 1024px) {<br />
+                .main {<br />
+                color: red;<br />
+                border-radius: 20px;<br />
+                background: yellow;<br />
+                }<br />
+                }
+              </code>
+              <h5 class="article__header">& parent selector</h5>
+              <p class="article__description">
+                Pozwala na zapisanie jednej grupy BEM'owej w jednym miejscu.
+                Poprzez zagnieżdżanie własności, mamy wszystko w jednym miejscu,
+                a preprocesor zamieni to na czytelny kod dla przeglądarki.
+              </p>
+              <p class="article__description">SCSS</p>
+              <code class="code">
+                .about-sass {<br />
+                color: red;<br />
+                &__title {<br />
+                font-size: 20px;<br />
+                &--smaller {<br />
+                font-size: 16px;<br />
+                }<br />
+                }<br />
+                @media (max-width: 768px) {<br />
+                .about__title {<br />
+                font-size: 18px;<br />
+                }<br />
+                }
+              </code>
+              <p class="article__description">CSS</p>
+              <code class="code">
+                .about-sass {<br />
+                color: red;<br />
+                }<br />
+                .about-sass__title {<br />
+                font-size: 20px;<br />
+                }<br />
+                .about-sass__title--smaller {<br />
+                font-size: 16px;<br />
+                }<br />
+                @media (max-width: 768px) {<br />
+                .about-sass .about__title {<br />
+                font-size: 18px;<br />
+                }<br />
+                }
+              </code>
+              <p class="article__description">
+                Kiedy korzystamy z preprocesorów nie edytujemy plików wynikowych
+                .css
+              </p>
             </article>
           </section>
         </div>
@@ -252,6 +466,7 @@
             <a href="#2" class="aside__link">Node.js</a>
             <a href="#3" class="aside__link">NPM i NPX</a>
             <a href="#4" class="aside__link">NPM Scripts</a>
+            <a href="#5" class="aside__link">SASS / SCSS</a>
           </nav>
         </section>
       </section>

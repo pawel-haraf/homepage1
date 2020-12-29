@@ -19,6 +19,7 @@
   "homepage": "https://github.com/pawel-haraf/homepage1#readme",
   "dependencies": {
     "jsdom-quokka-plugin": "^1.0.16",
+    "moment": "^2.29.1",
     "node-sass": "^5.0.0"
   },
   "devDependencies": {

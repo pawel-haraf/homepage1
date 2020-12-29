@@ -1,13 +1,6 @@
 @charset "UTF-8";
-html {
-  box-sizing: border-box; }
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit; }
-
 /* Sekcja o mnie */
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
 .about {
   background: #6c757d;
   margin: 10px auto;
@@ -117,15 +110,6 @@ body {
   word-wrap: break-word;
   margin: 16px; }
 
-/* Lista haseł */
-.description-list {
-  color: #212529;
-  margin: 10px auto;
-  width: 53vw;
-  text-align: justify; }
-  .description-list__term {
-    margin: 10px 2px; }
-
 /*  Notatki z poszczególnych weekendów */
 .diary {
   grid-area: diary; }
@@ -145,31 +129,14 @@ body {
     color: #e9ecef;
     padding-bottom: 10px; }
 
-/* Hamburger menu */
-.hamburger {
-  position: absolute;
-  top: 20x;
-  right: 10px;
-  border: none;
-  background: none; }
-  @media (min-width: 768px) {
-    .hamburger {
-      display: none; } }
-
-.klasa-z-js {
-  background: yellow; }
-
-/* nagłówek - nawigacja */
-.header {
-  background: #fefefe;
-  top: 0;
-  width: 100vw;
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  min-height: 60px; }
+/* Lista haseł */
+.description-list {
+  color: #212529;
+  margin: 10px auto;
+  width: 53vw;
+  text-align: justify; }
+  .description-list__term {
+    margin: 10px 2px; }
 
 /* listy */
 .list {
@@ -203,6 +170,32 @@ body {
     margin: 10px auto;
     color: #212529;
     text-align: center; }
+
+/* Hamburger menu */
+.hamburger {
+  position: absolute;
+  top: 20x;
+  right: 10px;
+  border: none;
+  background: none; }
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none; } }
+
+.klasa-z-js {
+  background: yellow; }
+
+/* nagłówek - nawigacja */
+.header {
+  background: #fefefe;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  min-height: 60px; }
 
 /* Nawigacja - nagłówek */
 .navigation {
@@ -316,3 +309,11 @@ body {
       border: 1px #06021d solid;
       border-radius: 8px;
       margin: 10px 0 10px 10px; } }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
